@@ -1,0 +1,34 @@
+useDynLib(broman)
+
+# functions to export
+export(bromanversion)
+export(cf)
+export(convert2hex, dec2hex, hex2dec)
+export(get0, get.)
+export(paste., paste00, paste.., paste0., paste.0)
+export(revrainbow)
+export(grayplot)
+export(manyboxplot)
+export(h, objectsizes, myround)
+export(simp, trap)
+export(venn, mypairs)
+export(winsorize)
+export(normalize)
+export(attachfile, attachwork, loadfile, loadwork)
+export(binary.v, chisq, fisher, paired.perm.test, perm.test)
+export(triarrow, trilines, triplot, tripoints)
+export(arrowlocator)
+export(qr2)
+export(normalize)
+export(quantileSE)
+export(runningmean, runningratio)
+export(rmvn)
+
+S3method(cf, default)
+S3method(cf, list)
+
+# functions to import
+importFrom(graphics, arrows, layout, plot, par, text, rect, lines)
+importFrom(utils, help, object.size)
+importFrom(stats, t.test, density, quantile, rnorm)
+
