@@ -1,0 +1,233 @@
+Revision history for the R/broman package
+----------------------------------------------------------------------
+copyright (c) 2001-2012, Karl W Broman
+
+    The R/broman package is free software; you can redistribute it
+    and/or modify it under the terms of the GNU General Public
+    License, version 3, as published by the Free Software Foundation.
+    
+    This program is distributed in the hope that it will be useful,
+    but without any warranty; without even the implied warranty of
+    merchantability or fitness for a particular purpose.  See the GNU
+    General Public License for more details.
+    
+    A copy of the GNU General Public License, version 3, is available
+    at http://www.r-project.org/Licenses/GPL-3
+----------------------------------------------------------------------
+
+Version 0.38, 10/4/2012:
+
+    Changed order of plotting of vertical and horizontal lines in
+    grayplot().  Also added ability to control the margin parameters
+    (spacing of axis labels and such).
+
+
+Version 0.37, 7/19/2012:
+
+    Improved convert2hex so it handles numbers > 255; added alias
+    dec2hex.  Added related function hex2dec.
+  
+
+Version 0.36, 5/14/2012:
+
+    Added function cf() for comparing vectors/matrices/lists,
+    including proper handling of NAs
+
+    Added functions get0() and get.() which combine get and paste.
+
+    Added grayplot() for plots with gray backgrounds.
+
+    Added manyboxplot() for making boxplot-like figures with *many* groups
+
+    Added paste.() function, which is just paste(..., sep=".")
+
+    Added function revrainbow(), which is just rev(rainbow(start=0, end=2/3, ...))
+
+    Added paste00(), paste..(), paste0.() and paste.0()
+
+
+Version 0.35, 4/11/2012:
+
+    runningmean() can now also calculate a running SD.
+
+    Revised bromanversion() to use packageVersion().
+
+    Simplified myround(), using sprintf().
+
+
+Version 0.34, 11/7/2011:
+
+    Added NAMESPACE (for R 2.14.0)
+
+
+Version 0.33, 4/23/2011:
+
+    Revised normalize() to handle NAs.
+
+    Added function winsorize() for winsorizing a numeric vector.
+
+    Added function bromanversion() to print installed version number. 
+
+
+Version 0.32, 12/14/2010:
+
+    Added function objectsizes(), for calculating the sizes of the
+    objects in one's workspace.
+
+
+Version 0.31, 11/22/2010:
+
+    Added functions triplot(), tripoints(), trilines(), triarrow() for
+    plotting Holmans triangle (an equilateral triangle used to depict
+    trinomial distributions).
+
+    Added function venn() for drawing a to-scale Venn diagram.
+
+    Added function arrowlocator() for using locator() to indicate the
+    endpoints of an arrow and then draw it.
+
+
+Version 0.30, 11/17/2010:
+
+    Fixed a bug in permtest (the pval argument didn't work).
+
+
+Version 0.29, 8/6/2010:
+
+    Deleted the nqrank() function, as I've now placed it within
+    R/qtl. 
+
+
+Version 0.28, 3/25/2010:
+
+    Slight change to nqrank, so that -Inf values are replaced by
+    10 *less* than the minimum of any finite values (rather than 10
+    *more* than that minimum).
+
+
+Version 0.27, 11/6/2009:
+
+    Revised runningmean and runningratio so that the statistics can be
+    calculated at arbitrary locations.  Also revised them so that the
+    input do not need to have sorted positions.
+
+
+Version 0.26, 10/26/2009:
+
+    Slight change to nqrank, to preserve the mean and SD.
+
+    Fixed a few links in the help files.
+
+    Revised h() to conform to a change in R.
+
+Version 0.25, 8/11/2009:
+
+    Slight change to nqrank, so that ties are not jittered by default,
+    but may be (if one uses the argument jitter=TRUE).
+
+Version 0.24, 4/28/2009:
+
+    Updated license to GPL-3
+
+Version 0.23, 11/20/2008:
+
+    Revised perm.test and paired.perm.test so that they can return the
+    actual permutation results (rather than just the p-value), though
+    the default is still to just return the p-value.
+
+    Fixed a bug in myround().
+
+Version 0.22, 9/19/2008:
+
+    Revised attachfile and attachwork so that they return (invisibly)
+    TRUE/FALSE according to whether the file was found.
+
+    Also added an argument 'verbose'; if TRUE and the file can't be
+    loaded, a warning is given.
+
+Version 0.21, 2/29/2008:
+
+    Added a function normalize() for doing quantile normalization.
+
+Version 0.20, 1/18/2007:
+
+    Modified fisher() so that the p-value is Prop'n >= rather
+    than just >.
+
+    Added a similar function, chisq() for doing a chi-square test
+    with p-value calculated by simulation.  In 0.20-2, suppressed
+    warnings produced by chisq.test.
+
+
+Version 0.19, 10/9/2007:
+
+    Added a function runningratio, for calculating
+    sum(numerator)/sum(denominator) in sliding window.
+
+    Fixed some errors in the help files.
+
+
+Version 0.18, 9/20/2007:
+
+    Fixed a bug in loadwork().
+
+
+Version 0.17, 1/16/2006:
+  
+    Added a function h() for getting access to html help files while
+    running R via ESS within emacs.
+
+
+Version 0.16, 12/19/2006:
+
+    Added a function runningmean().
+
+    Fixed a bug in paired.perm.test().
+
+
+Version 0.15, 8/14/2006
+
+    Added a function myround().
+	
+
+Version 0.14, 6/28/2006
+
+    Added a function mypairs(), similar to pairs() but producing only
+    the upper triangle.
+
+    Added a convert2hex() function.
+
+
+Version 0.13, 12/8/2004
+
+    Added attachfile() and loadfile(), similar to loadwork() and
+    attachwork(). 
+
+Version 0.12, 8/6/2004
+
+    Added little utility functions loadwork() and attachwork()
+    for loading or attaching .RData files of the form
+    "dir*/.RData", when * is an integer, and especially when
+    dir = "Work".
+
+Version 0.11, 4/29/2002:
+
+    Added perm.test and paired.perm.test for getting p-values for a
+    two-sample t-statistic by permutation.
+
+    There was an obvious bug in the function fisher(), which is now
+    fixed. 
+
+
+Version 0.10, 11/21/2001:
+
+    This is a package to contain miscellaneous R functions that I find
+    useful.  
+
+    Currently, it contains functions to get SEs of sample quantiles, 
+    a sampling version of fisher.test, a re-parse of the output of
+    qr(), simulation from a multivariate normal distribution, and
+    numerical integration by Simpson's rule.
+
+----------------------------------------------------------------------
+end of STATUS.txt
