@@ -1,10 +1,10 @@
 ######################################################################
 #
-# myround.R
+# histlines.R
 #
-# copyright (c) 2002-2013, Karl W Broman
-# First written Aug, 2002
-# Last modified Mar, 2013
+# copyright (c) 2013, Karl W Broman
+# First written May, 2013
+# Last modified May, 2013
 #
 #     This program is free software; you can redistribute it and/or
 #     modify it under the terms of the GNU General Public License,
@@ -19,28 +19,30 @@
 #     at http://www.r-project.org/Licenses/GPL-3
 # 
 # Part of the R/broman package
-# Contains: myround
+# Contains: histlines
 #
 ######################################################################
 
-myround <-
-function(x, digits=1)
+# Either:
+# x = breaks for histogram; y = counts or density
+#
+# or:
+# x = data, breaks=pass to hist()
+histlines <-
+function(x, y, breaks, use=c("counts", "density")) 
 {
-  if(digits < 1) 
-    stop("This is intended for the case digits >= 1.")
-  
-  if(length(digits) > 1) {
-    digits <- digits[1]
-    warning("Using only digits[1]")
+  if(missing(y)) { # input doesn't count the count information
+    out <- hist(x, breaks=breaks, plot=FALSE)
+    x <- out$breaks
+    use <- match.arg(use)
+    y <- out[[use]]
   }
 
-  tmp <- sprintf(paste("%.", digits, "f", sep=""), x)
+  if(length(x) != length(y)+1)
+    stop("length(x) != length(y) + 1")
 
-  # deal with "-0.00" case
-  zero <- paste0("0.", paste(rep("0", digits), collapse=""))
-  tmp[tmp == paste0("-", zero)] <- zero
-
-  tmp
+  x <- as.numeric(rbind(x, x))
+  y <- c(0, as.numeric(rbind(y,y)), 0)
+  data.frame(x=x, y=y)
 }
- 
-# end of myround.R
+
