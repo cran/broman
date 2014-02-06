@@ -1,6 +1,6 @@
 Revision history for the R/broman package
 ----------------------------------------------------------------------
-copyright (c) 2001-2012, Karl W Broman
+copyright (c) 2001-2013, Karl W Broman
 
     The R/broman package is free software; you can redistribute it
     and/or modify it under the terms of the GNU General Public
@@ -14,6 +14,37 @@ copyright (c) 2001-2012, Karl W Broman
     A copy of the GNU General Public License, version 3, is available
     at http://www.r-project.org/Licenses/GPL-3
 ----------------------------------------------------------------------
+
+Version 0.44, 10/29/2013:
+
+   Revise tripoints() and related functions to invisibly return the
+   (x,y) coordinates of the points, as plotted.
+
+
+Version 0.43, 8/2/2013:
+
+   Added qqline2(), which is like qqline() but for two datasets.
+
+
+Version 0.42, 6/8/2013:
+
+   Revise grayplot for better treatment of x- and y-axis titles,
+   including the use of mgp/mgp.x/mgp.y.
+
+
+Version 0.41, 5/13/2013:
+
+   Added function histlines for making a histogram with lines().
+
+
+Version 0.40, 5/3/2013:
+
+   Added function xlimlabel for determining appropriate xlim to add
+   character string labels to a plot
+
+   Added functions strwidth2xlim and strwidth2lines for calculating
+   margin lengths or x-axis limits that will fit a given set of text.
+
 
 Version 0.39, 10/17/2012:
 
