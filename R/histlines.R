@@ -16,7 +16,7 @@
 #' @param y Optional vector of density/counts, with length = \code{length(x)-1}.
 #'
 #' @param breaks Breaks for histogram, if \code{y} is not provided.
-#' 
+#'
 #' @param use Whether to use \code{counts} or \code{density}, if \code{y}
 #'  is not provided.
 #'
@@ -33,9 +33,6 @@
 #'
 #' @return
 #' A data.frame with two columns: \code{x} and \code{y}.
-#'
-#' @author
-#' Karl W Broman \email{kbroman@@biostat.wisc.edu}
 #'
 #' @examples
 #' x <- rnorm(1000, mean=20, sd=5)
@@ -64,20 +61,19 @@
 #' @keywords
 #' graphics
 histlines <-
-function(x, y, breaks, use=c("counts", "density")) 
+    function(x, y, breaks, use=c("counts", "density"))
 {
-  if(missing(y)) { # input doesn't count the count information
-    out <- hist(x, breaks=breaks, plot=FALSE)
-    x <- out$breaks
-    use <- match.arg(use)
-    y <- out[[use]]
-  }
+    if(missing(y)) { # input doesn't count the count information
+        out <- hist(x, breaks=breaks, plot=FALSE)
+        x <- out$breaks
+        use <- match.arg(use)
+        y <- out[[use]]
+    }
 
-  if(length(x) != length(y)+1)
-    stop("length(x) != length(y) + 1")
+    if(length(x) != length(y)+1)
+        stop("length(x) != length(y) + 1")
 
-  x <- as.numeric(rbind(x, x))
-  y <- c(0, as.numeric(rbind(y,y)), 0)
-  data.frame(x=x, y=y)
+    x <- as.numeric(rbind(x, x))
+    y <- c(0, as.numeric(rbind(y,y)), 0)
+    data.frame(x=x, y=y)
 }
-

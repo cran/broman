@@ -1,19 +1,81 @@
 Revision history for the R/broman package
 ----------------------------------------------------------------------
-copyright (c) 2001-2014, Karl W Broman
+copyright (c) 2001-2015, Karl W Broman
 
     The R/broman package is free software; you can redistribute it
     and/or modify it under the terms of the GNU General Public
     License, version 3, as published by the Free Software Foundation.
-    
+
     This program is distributed in the hope that it will be useful,
     but without any warranty; without even the implied warranty of
     merchantability or fitness for a particular purpose.  See the GNU
     General Public License for more details.
-    
+
     A copy of the GNU General Public License, version 3, is available
     at http://www.r-project.org/Licenses/GPL-3
 ----------------------------------------------------------------------
+
+Version 0.55, 2015-04-22:
+
+  Add function theme_karl() (aka karl_theme()), with a ggplot2 theme
+  that removes the tick boxes and adds a black border.
+
+
+Version 0.54-3, 2015-03-05:
+
+  Delete functions get0() and get.() since there's going to be a get0
+  function in base R 3.2.0.
+
+
+Version 0.54-2, 2015-02-12:
+
+  Add note() function, which is just a wrapper for
+  RPushbullet::pbPost.
+
+  Revised make() to work with any directory (not just an R package).
+  Also added a "target" argument.
+
+
+Version 0.53-1, 2/9/2015:
+
+  Add exit() function, which is just the same as q("no").
+
+
+Version 0.50-1, 12/1/2014:
+
+  Revise errors2pushbullet(), argument deviceind replaced by
+  recipients.
+
+
+Version 0.49-6, 11/3/2014:
+
+  Added argument v_over_h to grayplot(), controlling whether
+  horizontal gridlines are on top of the vertical ones or vice versa.
+
+  Revisions to grayplot for better treatment of case of missing y.
+  To avoid gridlines, use vlines=NA and/or hlines=NA.
+
+
+Version 0.49-3, 10/24/2014:
+
+  Added function attrnames() which is just names(attributes(object))
+
+
+Version 0.49, 9/3/2014:
+
+  Add function errors2pushbullet() which sets options(error) to use
+  the RPushbullet package to send a push notification.
+
+
+Version 0.48, 7/16/2014:
+
+  Add crayon colors to brocolors(), and plot_crayons function to view
+  them. Change bg and bgpng for near-black background.
+
+  Add colwalpha function.
+
+  grayplot: change defaults for xat, yat, vlines, hlines
+
 
 Version 0.47, 3/30/2014:
 
@@ -85,7 +147,7 @@ Version 0.37, 7/19/2012:
 
     Improved convert2hex so it handles numbers > 255; added alias
     dec2hex.  Added related function hex2dec.
-  
+
 
 Version 0.36, 5/14/2012:
 
@@ -125,7 +187,7 @@ Version 0.33, 4/23/2011:
 
     Added function winsorize() for winsorizing a numeric vector.
 
-    Added function bromanversion() to print installed version number. 
+    Added function bromanversion() to print installed version number.
 
 
 Version 0.32, 12/14/2010:
@@ -154,7 +216,7 @@ Version 0.30, 11/17/2010:
 Version 0.29, 8/6/2010:
 
     Deleted the nqrank() function, as I've now placed it within
-    R/qtl. 
+    R/qtl.
 
 
 Version 0.28, 3/25/2010:
@@ -232,7 +294,7 @@ Version 0.18, 9/20/2007:
 
 
 Version 0.17, 1/16/2006:
-  
+
     Added a function h() for getting access to html help files while
     running R via ESS within emacs.
 
@@ -247,7 +309,7 @@ Version 0.16, 12/19/2006:
 Version 0.15, 8/14/2006
 
     Added a function myround().
-	
+
 
 Version 0.14, 6/28/2006
 
@@ -260,7 +322,7 @@ Version 0.14, 6/28/2006
 Version 0.13, 12/8/2004
 
     Added attachfile() and loadfile(), similar to loadwork() and
-    attachwork(). 
+    attachwork().
 
 Version 0.12, 8/6/2004
 
@@ -275,15 +337,15 @@ Version 0.11, 4/29/2002:
     two-sample t-statistic by permutation.
 
     There was an obvious bug in the function fisher(), which is now
-    fixed. 
+    fixed.
 
 
 Version 0.10, 11/21/2001:
 
     This is a package to contain miscellaneous R functions that I find
-    useful.  
+    useful.
 
-    Currently, it contains functions to get SEs of sample quantiles, 
+    Currently, it contains functions to get SEs of sample quantiles,
     a sampling version of fisher.test, a re-parse of the output of
     qr(), simulation from a multivariate normal distribution, and
     numerical integration by Simpson's rule.

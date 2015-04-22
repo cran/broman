@@ -13,19 +13,16 @@
 #' A character string with the version number of the currently installed
 #'   version of R/broman.
 #'
-#' @author
-#' Karl W Broman, \email{kbroman@@biostat.wisc.edu}
-#'
 #' @examples
 #' bromanversion()
 #'
 #' @keywords
 #' print
 bromanversion <-
-function()
+    function()
 {
-  version <- unlist(packageVersion("broman"))
+    version <- unlist(packageVersion("broman"))
 
-  # make it like #.#-#
-  paste(c(version,".","-")[c(1,4,2,5,3)], collapse="")
+    # make it like #.#-#
+    paste(c(version,".","-")[c(1,4,2,5,3)], collapse="")
 }

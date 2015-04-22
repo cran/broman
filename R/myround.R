@@ -16,9 +16,6 @@
 #' @return
 #' A vector of character strings.
 #'
-#' @author
-#' Karl W Broman \email{kbroman@@biostat.wisc.edu}
-#'
 #' @examples
 #' myround(51.01, 3)
 #' myround(0.199, 2)
@@ -29,21 +26,21 @@
 #' @keywords
 #' utilities
 myround <-
-function(x, digits=1)
+    function(x, digits=1)
 {
-  if(digits < 1) 
-    stop("This is intended for the case digits >= 1.")
-  
-  if(length(digits) > 1) {
-    digits <- digits[1]
-    warning("Using only digits[1]")
-  }
+    if(digits < 1)
+        stop("This is intended for the case digits >= 1.")
 
-  tmp <- sprintf(paste("%.", digits, "f", sep=""), x)
+    if(length(digits) > 1) {
+        digits <- digits[1]
+        warning("Using only digits[1]")
+    }
 
-  # deal with "-0.00" case
-  zero <- paste0("0.", paste(rep("0", digits), collapse=""))
-  tmp[tmp == paste0("-", zero)] <- zero
+    tmp <- sprintf(paste("%.", digits, "f", sep=""), x)
 
-  tmp
+    # deal with "-0.00" case
+    zero <- paste0("0.", paste(rep("0", digits), collapse=""))
+    tmp[tmp == paste0("-", zero)] <- zero
+
+    tmp
 }

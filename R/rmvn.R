@@ -21,9 +21,6 @@
 #' A matrix of size n x \code{length(mu)}.  Each row corresponds to a
 #'   separate replicate.
 #'
-#' @author
-#' Karl W Broman \email{kbroman@@biostat.wisc.edu}
-#'
 #' @examples
 #' x <- rmvn(100, c(1,2),matrix(c(1,1,1,4),ncol=2))
 #'
@@ -33,11 +30,11 @@
 #' @keywords
 #' datagen
 rmvn <-
-function(n, mu=0, V=matrix(1))
+    function(n, mu=0, V=matrix(1))
 {
-  p <- length(mu)
-  if(any(is.na(match(dim(V),p))))
-    stop("Dimension problem!")
-  D <- chol(V)
-  matrix(rnorm(n*p),ncol=p) %*% D + rep(mu,rep(n,p))
+    p <- length(mu)
+    if(any(is.na(match(dim(V),p))))
+        stop("Dimension problem!")
+    D <- chol(V)
+    matrix(rnorm(n*p),ncol=p) %*% D + rep(mu,rep(n,p))
 }
