@@ -29,6 +29,7 @@
 #'   case \code{\link[graphics]{hist}} is called with \code{breaks=breaks}, and
 #'   either the \code{counts} or \code{density} are used as \code{y}.
 #'
+#' @importFrom graphics hist
 #' @export
 #'
 #' @return

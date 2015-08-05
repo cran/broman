@@ -20,6 +20,7 @@
 #' @details
 #' See \code{text} for details on \code{pos} and \code{offset}.
 #'
+#' @importFrom graphics strwidth
 #' @export
 #'
 #' @return

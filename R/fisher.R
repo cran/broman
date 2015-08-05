@@ -16,6 +16,7 @@
 #'   calculates an approximate P-value rather than performing a complete
 #'   enumeration.  This will be better for large, sparse tables.
 #'
+#' @importFrom stats chisq.test
 #' @export
 #'
 #' @return

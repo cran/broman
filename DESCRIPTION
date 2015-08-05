@@ -1,6 +1,6 @@
 Package: broman
-Version: 0.55-2
-Date: 2015-04-22
+Version: 0.59-5
+Date: 2015-08-04
 Title: Karl Broman's R Code
 Description: Miscellaneous R functions.
 Author: Karl W Broman <kbroman@biostat.wisc.edu>, with contributions from Aimee
@@ -13,6 +13,6 @@ Suggests: testthat, devtools, roxygen2
 License: GPL-3
 URL: https://github.com/kbroman/broman
 NeedsCompilation: yes
-Packaged: 2015-04-22 17:12:37 UTC; kbroman
+Packaged: 2015-08-05 04:27:14 UTC; kbroman
 Repository: CRAN
-Date/Publication: 2015-04-22 21:50:11
+Date/Publication: 2015-08-05 09:30:43

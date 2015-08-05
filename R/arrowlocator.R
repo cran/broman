@@ -23,6 +23,7 @@
 #' Use \code{\link[graphics]{locator}} to indicate the two endpoints of
 #'   an arrow and then draw it.
 #'
+#' @importFrom graphics locator arrows
 #' @export
 #'
 #' @return

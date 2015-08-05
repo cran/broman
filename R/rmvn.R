@@ -14,8 +14,8 @@
 #' Uses the Cholesky decomposition of the matrix \code{V}, obtained by
 #'   \code{\link[base]{chol}}.
 #'
-#' @export
 #' @importFrom stats rnorm
+#' @export
 #'
 #' @return
 #' A matrix of size n x \code{length(mu)}.  Each row corresponds to a

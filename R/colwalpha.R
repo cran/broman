@@ -9,7 +9,7 @@
 #'
 #' @return A character string representing a color
 #'
-#' @importFrom grDevices col2rgb rgb
+#' @importFrom grDevices rgb col2rgb
 #' @export
 #' @keywords color
 #' @examples

@@ -23,6 +23,7 @@
 #' See \code{text} for details on \code{pos} and \code{offset}.
 #'
 #' @export
+#' @importFrom graphics strwidth
 #'
 #' @return
 #' Minimum and maximum x-axis limits for adding horizontal text

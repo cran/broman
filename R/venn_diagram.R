@@ -21,6 +21,7 @@
 #' Plots a to-scale Venn diagram with two sets, so that the relative
 #'   areas of the two sets and their intersection are exact.
 #'
+#' @importFrom stats uniroot
 #' @export
 #'
 #' @return

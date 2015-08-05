@@ -10,6 +10,7 @@
 #'    \code{cex}
 #'
 #' @export
+#' @importFrom graphics strwidth
 #'
 #' @return
 #' Maximum string width in units of margin lines

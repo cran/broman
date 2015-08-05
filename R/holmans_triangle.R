@@ -20,8 +20,8 @@
 #'   related functions \code{\link{tripoints}}, \code{\link{trilines}},
 #'   \code{\link{triarrow}}.
 #'
+#' @importFrom graphics plot par text segments points lines arrows
 #' @export
-#' @importFrom graphics arrows layout plot par text rect lines
 #'
 #' @return
 #' The (x,y) coordinates of the points plotted, if any.
