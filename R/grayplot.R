@@ -7,7 +7,7 @@
 #'
 #' @param x Coordinates of points in the plot
 #'
-#' @param y Corrdinates of points in the plot (optional)
+#' @param y Coordinates of points in the plot (optional)
 #'
 #' @param ... Optional graphics arguments
 #'
@@ -87,8 +87,9 @@ grayplot <-
     hidegrayplot <-
         function(x, y, ..., type="p", hlines, hlines.col, hlines.lty, hlines.lwd,
                  vlines, vlines.col, vlines.lty, vlines.lwd,
-                 xat, yat, bgcolor="gray80", xaxt="n", yaxt="n",
-                 col.lab="black",
+                 xat=pretty(x), yat=pretty(y), bgcolor="gray80", xaxt="n", yaxt="n",
+                 col.lab=par("col.lab"),
+                 xlim, ylim,
                  xlab, ylab, xname, yname,
                  las=1, mgp.x=c(2.6, 0.5, 0), mgp.y=c(2.6, 0.5, 0),
                  v_over_h=FALSE)
@@ -110,28 +111,35 @@ grayplot <-
                 if(missing(ylab)) ylab <- yname
             }
 
+            if(missing(ylim) || is.null(ylim))
+                ylim <- range(y, na.rm=TRUE)
             if(missing(hlines) || is.null(hlines)) {
                 if(!missing(yat) && !is.null(yat))
                     hlines <- yat
                 else
-                    hlines <- pretty(y)
+                    hlines <- pretty(ylim)
             }
             else if(length(hlines)==1 && is.na(hlines))
                 hlines <- NULL
+
+            if(missing(xlim) || is.null(xlim))
+                xlim <- range(x, na.rm=TRUE)
             if(missing(vlines) || is.null(vlines)) {
                 if(!missing(xat) && !is.null(xat))
                     vlines <- xat
                 else
-                    vlines <- pretty(x)
+                    vlines <- pretty(xlim)
             }
             else if(length(vlines)==1 && is.na(vlines))
                 vlines <- NULL
 
             # blank plot
             if(is.null(y))
-                plot(seq(along=x), x, ..., type="n", xaxt="n", yaxt="n", xlab="", ylab="")
+                plot(seq(along=x), x, ..., type="n", xaxt="n", yaxt="n", xlab="", ylab="",
+                     xlim=xlim, ylim=ylim)
             else
-                plot(x, y, ..., type="n", xaxt="n", yaxt="n", xlab="", ylab="")
+                plot(x, y, ..., type="n", xaxt="n", yaxt="n", xlab="", ylab="",
+                     xlim=xlim, ylim=ylim)
 
             # axis titles
             title(xlab=xlab, mgp=mgp.x, col.lab=col.lab)

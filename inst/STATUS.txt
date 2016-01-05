@@ -1,6 +1,6 @@
 Revision history for the R/broman package
 ----------------------------------------------------------------------
-copyright (c) 2001-2015, Karl W Broman
+copyright (c) 2001-2016, Karl W Broman
 
     The R/broman package is free software; you can redistribute it
     and/or modify it under the terms of the GNU General Public
@@ -14,6 +14,35 @@ copyright (c) 2001-2015, Karl W Broman
     A copy of the GNU General Public License, version 3, is available
     at http://www.r-project.org/Licenses/GPL-3
 ----------------------------------------------------------------------
+
+Version 0.62-1, 2015-01-05:
+
+  Remove attachfile() and loadfile() as I don't use them and they
+  cause CRAN headaches.
+
+
+Version 0.61-3, 2015-11-21:
+
+  Add function maxabs() which just does max(abs(x)).
+
+
+Version 0.61-2, 2015-11-15:
+
+  Add function dotplot() which is a simplified version of grayplot()
+  for categorical x.
+
+  Add function jiggle() for horizontal jiggling, either "fixed"
+  (deterministic, similar to the beeswarm package) or "random"; used
+  in dotplot()
+
+  In grayplot(), have vlines and hlines follow from xlim and ylim,
+  respectively, if they're provided.
+
+
+Version 0.60-1, 2015-09-24:
+
+  Add function fac2num() for converting a factor to numeric.
+
 
 Version 0.59-5, 2015-08-04:
 
