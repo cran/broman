@@ -38,14 +38,14 @@
 #' @keywords
 #' graphics
 dotplot <-
-    function(group, y, jiggle, rotate=FALSE, ...)
+    function(group, y, jiggle=NULL, rotate=FALSE, ...)
 {
     stopifnot(length(y) == length(group))
     if(length(unique(y)) < length(unique(group)))
         warning('Seems like maybe "group" and "y" got switched.')
 
     # horizontal jiggling
-    if(missing(jiggle) || is.null(jiggle))
+    if(is.null(jiggle))
         jiggle <- broman::jiggle(group, y, "fixed")
     else if(is.character(jiggle))
         jiggle <- broman::jiggle(group, y, jiggle)
@@ -89,7 +89,7 @@ dotplot <-
                          xat=xat, xlim=xlim, xaxs=xaxs, xlab=xlab,
                          yat=yat, ylim=ylim, yaxs=yaxs, ylab=ylab, las=las,
                          pch=pch, bg=bg, ...)
-                axis(side=1, at=vlines, ugroup, las=las)
+                axis(side=1, at=vlines, ugroup, las=las, tick=FALSE, mgp=c(0,0.2,0))
 
             }
             else {
@@ -106,7 +106,7 @@ dotplot <-
                          xat=xat, xlim=xlim, xaxs=xaxs, xlab=xlab,
                          yat=yat, ylim=ylim, yaxs=yaxs, ylab=ylab,
                          v_over_h=TRUE, las=las, pch=pch, bg=bg, ...)
-                axis(side=2, at=hlines, ugroup, las=las)
+                axis(side=2, at=hlines, ugroup, las=las, tick=FALSE, mgp=c(0,0.3,0))
             }
 
         }
