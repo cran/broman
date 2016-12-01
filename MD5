@@ -1,4 +1,4 @@
-9a4faf2bf165d5c666ba8dd79745aa55 *DESCRIPTION
+d8ed424c787f1ee39bdec993e21f81cd *DESCRIPTION
 bea37503cd1d092e1b847e01ac8db7bd *NAMESPACE
 5976cb71ab4dec18b3faa0ba900378f5 *R/add_commas.R
 d8ce149e12bc4ee3a94636a2dc21afba *R/arrowlocator.R
@@ -9,7 +9,7 @@ cc0acc7764b50c25c529c1fe8de1cad2 *R/brocolors.R
 5af22f001c7939d8db553de4cef93339 *R/compare_rows.R
 3019f750377a2675191038cf6eee3ed0 *R/convert2hex.R
 1836dbeef98793d36de91488c4c2fb9a *R/dotplot.R
-aacd8f4058fa4fb5c3fd6051679eefd1 *R/excel_fig.R
+1800a0b170976a150af80ca865f38296 *R/excel_fig.R
 2109c9de80e2746fa1dd25966e0ccbb1 *R/exit.R
 49985fb87ee49f9cc7d3011630b0b8d5 *R/fac2num.R
 58b3560bf2cfbdecbee19376892e7c27 *R/fisher.R
@@ -48,10 +48,10 @@ e52fc0b39b31b23d91ff495c9b2e5294 *R/theme_karl.R
 8d7f6dae6ee01cb22d61b6f3f4d74a2c *R/venn_diagram.R
 3c546b0fdf0a67f2026fc0e41357661b *R/winsorize.R
 f575117a46842d66134d6caba8de633b *R/xlimlabel.R
-313e8c4cff18031a763f88246cd51a6e *data/numbers-cap.RData
-6243fd6144123b3e283f59c9a9b631ca *data/numbers.RData
+b0c6e38024d71b9f98b5c8319f1894a3 *data/numbers-cap.RData
+fdfe3c2e892a31c8440ffcf53968f7b3 *data/numbers.RData
 a8827db88f5e8e208a9867828ccd1c7b *inst/LICENSE.txt
-fac3ed6e05b97ca95fc6817cf97d7a82 *inst/README.md
+43a9e8d56b729af7948509a005bc1b9b *inst/README.md
 bea7d81c6959ae17ba202a4704597af4 *inst/STATUS.txt
 346f69227809bbc850f77b36aad35bcb *man/add_commas.Rd
 55f7820c7560bf00d05f8bef2287201c *man/arrowlocator.Rd
@@ -66,7 +66,7 @@ b53b7c942d7912f7ac62ac952d63544b *man/compare_rows.Rd
 13a2645ea438719264484b4b608e789d *man/done.Rd
 0636d7486c7ca5997d03c73f2277fdef *man/dotplot.Rd
 70d9e193231d83bb961879fb11bcae0b *man/errors2pushbullet.Rd
-a59d1611895576e685e896a53a1cc4af *man/excel_fig.Rd
+aaa9dd26144fcb23d573d4104b024968 *man/excel_fig.Rd
 57440ab73048e95f2d63e5a4845673be *man/exit.Rd
 12d18cb260c99b27bfb0efda674a0f80 *man/fac2num.Rd
 7b3868c69dabb07c7afd9f31308cf7f1 *man/fisher.Rd
