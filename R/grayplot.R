@@ -1,9 +1,11 @@
 #  grayplot
 #'
-#' Plot with a gray background
+#' Scatterplot with a gray background
 #'
 #' Like the plot function, but using a gray background just
-#'   for the plot regin.
+#'   for the plot region.
+#'
+#' @md
 #'
 #' @param x Coordinates of points in the plot
 #'
@@ -13,7 +15,7 @@
 #'
 #' @param type Plot type (points, lines, etc.)
 #'
-#' @param hlines Locations of horizontal grid lines; use \code{hlines=NA} to prevent horizontal grid lines
+#' @param hlines Locations of horizontal grid lines; use `hlines=NA` to prevent horizontal grid lines
 #'
 #' @param hlines.col Colors of horizontal grid lines
 #'
@@ -21,7 +23,7 @@
 #'
 #' @param hlines.lwd Line width of horizontal grid lines
 #'
-#' @param vlines Locations of vertical grid lines; use \code{vlines=NA} to prevent vertical grid lines
+#' @param vlines Locations of vertical grid lines; use `vlines=NA` to prevent vertical grid lines
 #'
 #' @param vlines.col Colors of vertical grid lines
 #'
@@ -29,22 +31,25 @@
 #'
 #' @param vlines.lwd Line width of vertical grid lines
 #'
-#' @param xat Locations for x-axis labels; \code{xat=NA} indicates no labels
+#' @param xat Locations for x-axis labels; `xat=NA` indicates no labels
 #'
-#' @param yat Locations for y-axis labels; \code{yat=NA} indicates no labels
+#' @param yat Locations for y-axis labels; `yat=NA` indicates no labels
 #'
 #' @param bgcolor Background color
 #'
-#' @param v_over_h If \code{TRUE}, place vertical grid lines on top of
+#' @param pch point type
+#' @param bg Background color in points
+#' @param col Color of outer circle in points
+#'
+#' @param v_over_h If `TRUE`, place vertical grid lines on top of
 #' the horizontal ones.
 #'
 #' @details
-#' Calls \code{\link[graphics]{plot}} with \code{type="n"}, then
-#'   \code{\link[graphics]{rect}} to get the background, and then
-#'   \code{\link[graphics]{points}}.
-#'   Additional arguments you can include: \code{mgp.x} and \code{mgp.y}
-#'   (like \code{mgp}, for controlling parameters of axis labels, but
-#'   separate for x- and y-axis).
+#' Calls [graphics::plot()] with `type="n"`, then [graphics::rect()] to
+#' get the background, and then [graphics::points()]. Additional
+#' arguments you can include: `mgp.x` and `mgp.y` (like `mgp`, for
+#' controlling parameters of axis labels, but separate for x- and
+#' y-axis).
 #'
 #' @export
 #' @importFrom graphics plot title rect axis abline points
@@ -56,25 +61,24 @@
 #' \dontshow{set.seed(97536917)}
 #' x <- rnorm(100)
 #' y <- x+rnorm(100, 0, 0.7)
-#' grayplot(x, y, col="blue", pch=16)
+#' grayplot(x, y, col="slateblue", pch=16)
 #' at <- seq(-3, 3)
-#' grayplot(x, y, col="blue", pch=16, hlines=at, vlines=at)
-#' grayplot(x, col="violet", pch=16, bgcolor="gray90",
+#' grayplot(x, y, col="violetred", pch=16, hlines=at, vlines=at)
+#' grayplot(x, col="Orchid", pch=16, bgcolor="gray80",
 #'          hlines=seq(-4, 4, by=0.5), hlines.lwd=c(3,1),
 #'          vlines=seq(0, 100, by=5), vlines.lwd=c(3,1,1,1))
 #'
 #' @seealso
-#' \code{\link[graphics]{plot}},
-#'   \code{\link[graphics]{par}},
-#'   \code{\link[graphics]{rect}},
-#'   \code{\link[graphics]{points}}
+#' [graphics::plot()], [graphics::par()], [graphics::rect()], [graphics::points()]
 #'
 #' @keywords
 #' graphics
 grayplot <-
     function(x, y=NULL, ..., type="p", hlines=NULL, hlines.col="white", hlines.lty=1, hlines.lwd=1,
              vlines=NULL, vlines.col="white", vlines.lty=1, vlines.lwd=1,
-             xat=NULL, yat=NULL, bgcolor="gray80", v_over_h=FALSE)
+             xat=NULL, yat=NULL, bgcolor="gray90",
+             pch=21, bg="lightblue", col="black",
+             v_over_h=FALSE)
 {
     if(missing(x) || is.null(x)) stop("x unspecified")
 
@@ -82,11 +86,12 @@ grayplot <-
     hidegrayplot <-
         function(x, y, ..., type="p", hlines=NULL, hlines.col, hlines.lty, hlines.lwd,
                  vlines=NULL, vlines.col, vlines.lty, vlines.lwd,
-                 xat=pretty(x), yat=pretty(y), bgcolor="gray80", xaxt="n", yaxt="n",
+                 xat=pretty(x), yat=pretty(y), bgcolor="gray90", xaxt="n", yaxt="n",
                  col.lab=par("col.lab"),
                  xlim=NULL, ylim=NULL,
                  xlab, ylab, xname, yname,
                  las=1, mgp.x=c(2.6, 0.5, 0), mgp.y=c(2.6, 0.5, 0),
+                 pch=21, bg="lightblue", col="black",
                  v_over_h=FALSE)
         {
             dots <- list(...)
@@ -109,7 +114,7 @@ grayplot <-
             if(is.null(ylim))
                 ylim <- range(y, na.rm=TRUE)
             if(is.null(hlines)) {
-                if(!missing(yat) && !is.null(yat))
+                if(!is.null(yat))
                     hlines <- yat
                 else
                     hlines <- pretty(ylim)
@@ -120,7 +125,7 @@ grayplot <-
             if(is.null(xlim))
                 xlim <- range(x, na.rm=TRUE)
             if(is.null(vlines)) {
-                if(!missing(xat) && !is.null(xat))
+                if(!is.null(xat))
                     vlines <- xat
                 else
                     vlines <- pretty(xlim)
@@ -129,12 +134,8 @@ grayplot <-
                 vlines <- NULL
 
             # blank plot
-            if(is.null(y))
-                plot(seq(along=x), x, ..., type="n", xaxt="n", yaxt="n", xlab="", ylab="",
-                     xlim=xlim, ylim=ylim)
-            else
-                plot(x, y, ..., type="n", xaxt="n", yaxt="n", xlab="", ylab="",
-                     xlim=xlim, ylim=ylim)
+            plot(x, y, ..., type="n", xaxt="n", yaxt="n", xlab="", ylab="",
+                 xlim=xlim, ylim=ylim)
 
             # axis titles
             title(xlab=xlab, mgp=mgp.x, col.lab=col.lab)
@@ -183,8 +184,7 @@ grayplot <-
             if(!is.null(vlines) && v_over_h)
                 abline(v=vlines, col=vlines.col, lty=vlines.lty, lwd=vlines.lwd)
 
-            if(is.null(y)) points(seq(along=x), x, ..., type=type)
-            else points(x, y, ..., type=type)
+            points(x, y, ..., pch=pch, bg=bg, col=col, type=type)
 
             # add black border again
             abline(v=u[1:2], h=u[3:4])
@@ -195,6 +195,7 @@ grayplot <-
                  vlines=vlines, vlines.col=vlines.col,
                  vlines.lty=vlines.lty, vlines.lwd=vlines.lwd,
                  xat=xat, yat=yat, bgcolor=bgcolor,
+                 pch=pch, bg=bg, col=col,
                  xname=substitute(x), yname=substitute(y),
                  v_over_h=v_over_h)
     invisible()
