@@ -1,6 +1,6 @@
-25b88b19de63e880cf4f8eae914faba5 *DESCRIPTION
-b26a3ba2aca0624c8ac0c28bd3a8942e *NAMESPACE
-70cb9f457b14683711ad8f90a4c8b53d *NEWS
+0566517708dae16d2af59795d0e2b5c2 *DESCRIPTION
+27e93eb0d85633dac010d622b29d560d *NAMESPACE
+65a384e89ea21f215373f202ba787783 *NEWS
 5976cb71ab4dec18b3faa0ba900378f5 *R/add_commas.R
 a4446c5a86d0fbe1fb5f8eb8665c55ca *R/align_stuff.R
 d8ce149e12bc4ee3a94636a2dc21afba *R/arrowlocator.R
@@ -20,7 +20,7 @@ b903f21bde16e212d583c21fb63d2ee5 *R/grayplot.R
 30457597f17991b92e6d97b64322f7fa *R/grayplot_na.R
 dfc59dcf6e9511da01180e6e4596d3d4 *R/help.R
 380f57e291cff99bdf7aa904d434b183 *R/histlines.R
-3b215d24210da2b78801356dba78eb25 *R/holmans_triangle.R
+396c647cbcec67c6ba68d6fe9cc64799 *R/holmans_triangle.R
 3c7b69c97fc3ef06f05b646ef2e7b563 *R/jiggle.R
 d6137ea20b62ea43e224a410ca258ab1 *R/kbdate.R
 1cc117109b437db9111763302caf9087 *R/lenuniq.R
@@ -32,7 +32,7 @@ fff0a7d787f47cd987e3bacd66b97db5 *R/myround.R
 77f1e010364eeb1928369ad7752c8b28 *R/normalize.R
 b93708c005db03336e369121fe393e5e *R/numbers.R
 83e08b1139bd7923ae3097894f8c032f *R/objectsizes.R
-4aefa771e44c481e0a95c14c2f84ef45 *R/openfile.R
+471bc44f59a0cff7c9281d571a931fb6 *R/openfile.R
 2e877af923fb84f58767b410150ea81d *R/pastedot.R
 abfd5691255958a0bab727a97022ff4a *R/permtest.R
 04a66a12fb5fbfbf00bcc4c541794101 *R/pick_more_precise.R
@@ -55,8 +55,8 @@ e6ad173f05f1a31672cea03987aac32b *R/vec2string.R
 3c546b0fdf0a67f2026fc0e41357661b *R/winsorize.R
 f575117a46842d66134d6caba8de633b *R/xlimlabel.R
 17eca76be7ee88043419634a732d2ef5 *R/zzz.R
-fce7098022b0abfe12cd261a9aaf4094 *data/numbers-cap.RData
-9995ca8395895e059b8b093d1ddf9a9e *data/numbers.RData
+089f71d22b7b02e67347444164ecc4b3 *data/numbers-cap.RData
+b53e0e9ca5505e1e4beec88aa06fe43f *data/numbers.RData
 a8827db88f5e8e208a9867828ccd1c7b *inst/LICENSE.txt
 43a9e8d56b729af7948509a005bc1b9b *inst/README.md
 fee00bc27aa14d801301bfd07824bb7d *man/add_commas.Rd
@@ -96,7 +96,7 @@ fd83acf88c4feefad4f7abba7c5a8906 *man/myround.Rd
 0f0d0c037f5fff1af0571c6bc3354ebd *man/note.Rd
 d43fdbf7f92ceea97b77b255572d8438 *man/numbers.Rd
 2cb81331a1a71b45df8e35a6c8ec3a3f *man/objectsizes.Rd
-d58ee73542fecb71fd1d75e9b727fc9c *man/openfile.Rd
+9120768081464d12a9d69ac48a595838 *man/openfile.Rd
 08d71e9f94c04099a5bcd6dc54321828 *man/paired.perm.test.Rd
 5b39e8d5a1bc0b8fe5ed21d004baf1e2 *man/paste..Rd
 33cced8aa625774b4b79d96cb3347475 *man/paste00.Rd
@@ -118,10 +118,11 @@ a556f39670dc215126ff6f5347bee9aa *man/simp.Rd
 083c82782788869dd0da8ab6b83b61a0 *man/strwidth2xlim.Rd
 5a6fdfc9cc9540df0bef2b0974f4501d *man/switchv.Rd
 50617329a68fd821d3cdb9f9c1b6e2aa *man/theme_karl.Rd
-7ba7b70b019080b00948c87b08b5fce6 *man/triarrow.Rd
-f2e03540c062d6ca517d82292a04d17f *man/trilines.Rd
-35429c73c66b526d0e296b23b64d0154 *man/triplot.Rd
-f3268012383c043c8989148c0e96581e *man/tripoints.Rd
+9c6bc2dc4f75b6ef6252c46705dde394 *man/triarrow.Rd
+7033bbc573852cd53c5ec82653032cb6 *man/trilines.Rd
+1843399e1e2f8bfe1b3e7535960d8cb1 *man/triplot.Rd
+5e060db1a3caf105d6b0654640ee04b1 *man/tripoints.Rd
+02a62677d15287abb55b8f94c2d37e5d *man/tritext.Rd
 cebf221575333fb8f6b4de9e4d2cf5ab *man/vec2string.Rd
 4f7bf4efcd47ec6cc49d3926ce1e6694 *man/venn.Rd
 6637894353fa19b70dd6290499338ecb *man/winsorize.Rd

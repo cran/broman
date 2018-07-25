@@ -1,6 +1,6 @@
 Package: broman
-Version: 0.67-4
-Date: 2017-12-08
+Version: 0.68-2
+Date: 2018-07-24
 Title: Karl Broman's R Code
 Description: Miscellaneous R functions, including functions related to
     graphics (mostly for base graphics), permutation tests, running
@@ -14,10 +14,12 @@ Imports: utils, graphics, grDevices, stats, assertthat, RPushbullet,
 Suggests: testthat, devtools, roxygen2
 License: GPL-3
 URL: https://github.com/kbroman/broman
+BugReports: https://github.com/kbroman/broman/issues
 Encoding: UTF-8
+ByteCompile: true
 LazyData: true
 RoxygenNote: 6.0.1
 NeedsCompilation: yes
-Packaged: 2017-12-08 22:53:31 UTC; kbroman
+Packaged: 2018-07-25 02:36:59 UTC; kbroman
 Repository: CRAN
-Date/Publication: 2017-12-08 23:24:51 UTC
+Date/Publication: 2018-07-25 12:30:02 UTC
