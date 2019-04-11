@@ -8,8 +8,8 @@ excel_fig(mat, file = NULL, cellwidth = 80, cellheight = 26,
   textsize = 16, fig_width = NULL, fig_height = NULL,
   border = "#CECECE", headcol = "#E9E9E9", headborder = "#969696",
   headtextcol = "#626262", textcol = "black", row_names = FALSE,
-  col_names = TRUE, hilitcells = NULL, hilitcolor = "#F0DCDB", lwd = 1,
-  direct2svg = FALSE, mar = rep(0.1, 4))
+  col_names = TRUE, hilitcells = NULL, hilitcolor = "#F0DCDB",
+  lwd = 1, direct2svg = FALSE, mar = rep(0.1, 4))
 }
 \arguments{
 \item{mat}{A matrix}
@@ -46,9 +46,9 @@ excel_fig(mat, file = NULL, cellwidth = 80, cellheight = 26,
 
 \item{lwd}{Line width for rectangles}
 
-\item{direct2svg}{If TRUE, rather than R graphics, just print an SVG directly with \code{\link[base]{cat}}.}
+\item{direct2svg}{If TRUE, rather than R graphics, just print an SVG directly with \code{\link[base:cat]{base::cat()}}.}
 
-\item{mar}{Plot margins, passed to \code{\link[graphics]{par}}}
+\item{mar}{Plot margins, passed to \code{\link[graphics:par]{graphics::par()}}.}
 }
 \description{
 Turn a matrix of data into an SVG of how it might look in Excel

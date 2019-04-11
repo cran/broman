@@ -8,13 +8,14 @@
 #' devices this post should go to. If NULL, the default device is
 #' looked up from an optional setting, and if none has been set the
 #' push is sent to all devices. (passed to
-#' \code{\link[RPushbullet]{pbPost}}.)
+#' [RPushbullet::pbPost()].)
 #'
 #' @export
 #' @examples
 #' \dontrun{errors2pushbullet()}
 #' @keywords utilities
-#' @seealso \code{\link{stop_sending_errors}}
+#' @seealso [stop_sending_errors()], [note()], [done()],
+#'     [pushbullet_devices()]
 errors2pushbullet <-
     function(recipients=NULL) {
         load_pushbullet()
@@ -31,17 +32,18 @@ errors2pushbullet <-
             } )
     }
 
-# errors2pushbullet
+# stop_sending_errors
 #' Stop sending errors to pushbullet
 #'
-#' Clear the \code{error} option, so that error notifications are no
+#' Clear the `error` option, so that error notifications are no
 #' longer sent to pushbullet.
 #'
 #' @export
 #' @examples
 #' \dontrun{stop_sending_errors()}
 #' @keywords utilities
-#' @seealso \code{\link{errors2pushbullet}}
+#' @seealso [errors2pushbullet()],
+#'     [pushbullet_devices()]
 stop_sending_errors <-
     function()
 {
@@ -92,14 +94,16 @@ load_pushbullet <-
 #'
 #' Send a short message via RPushbullet, to be used to indicate that
 #' some R job is complete.
-#' #'
 #' @param message A character string with a message.
-#' (passed to \code{\link[RPushbullet]{pbPost}}.)
+#' (passed to [RPushbullet::pbPost()].)
 #' @param recipients A character or numeric vector indicating the
 #' devices this post should go to. If NULL, the default device is
 #' looked up from an optional setting, and if none has been set the
 #' push is sent to all devices. (passed to
-#' \code{\link[RPushbullet]{pbPost}}.)
+#' [RPushbullet::pbPost()].)
+#'
+#' @seealso [errors2pushbullet()], [note()],
+#'     [pushbullet_devices()]
 #'
 #' @export
 #' @examples
@@ -123,7 +127,7 @@ done <-
 # note
 #' Send a note to pushbullet
 #'
-#' Even simpler interface for \code{\link[RPushbullet]{pbPost}}
+#' Even simpler interface for [RPushbullet::pbPost()]
 #' to send a bit of text to pushbullet.
 #'
 #' @param title The title of the note (could be the whole thing).
@@ -131,8 +135,11 @@ done <-
 #' devices this post should go to. If NULL, the default device is
 #' looked up from an optional setting, and if none has been set the
 #' push is sent to all devices. (passed to
-#' \code{\link[RPushbullet]{pbPost}}.)
+#' [RPushbullet::pbPost()].)
 #' @param body The body of the note (by default, empty)
+#'
+#' @seealso [errors2pushbullet()], [done()],
+#'     [pushbullet_devices()]
 #'
 #' @export
 #' @examples
@@ -156,6 +163,8 @@ note <-
 #' Grab info on Pushbullet devices.
 #'
 #' Get names and identifiers of Pushbullet devices.
+#'
+#' @seealso [errors2pushbullet()], [done()], [note()]
 #'
 #' @export
 #' @return

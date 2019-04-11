@@ -4,15 +4,15 @@
 \alias{plot_crayons}
 \title{Illustration of crayon colors}
 \usage{
-plot_crayons(method2order = c("hsv", "cluster"), cex = 0.6, mar = rep(0.1,
-  4), bg = "white", fg = "black", border = FALSE)
+plot_crayons(method2order = c("hsv", "cluster"), cex = 0.6,
+  mar = rep(0.1, 4), bg = "white", fg = "black", border = FALSE)
 }
 \arguments{
 \item{method2order}{method to order colors (\code{"hsv"} or \code{"cluster"})}
 
 \item{cex}{character expansion for the text}
 
-\item{mar}{margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})}
+\item{mar}{margin paramaters; vector of length 4 (see \code{\link[graphics:par]{graphics::par()}})}
 
 \item{bg}{Background color}
 
@@ -24,14 +24,14 @@ plot_crayons(method2order = c("hsv", "cluster"), cex = 0.6, mar = rep(0.1,
 None
 }
 \description{
-Creates a plot of the crayon colors in \code{\link{brocolors}}
+Creates a plot of the crayon colors in \code{\link[=brocolors]{brocolors()}}
 }
 \examples{
 plot_crayons()
 }
 \references{
-\url{http://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors}
+\url{https://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors}
 }
 \seealso{
-\code{\link{brocolors}}
+\code{\link[=brocolors]{brocolors()}}
 }

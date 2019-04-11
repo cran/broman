@@ -15,20 +15,21 @@
 #'    applied.
 #'
 #' @param at Positions at which running mean (or sum or median or sd) is
-#' calculated.  If NULL, \code{pos} is used.
+#' calculated.  If NULL, `pos` is used.
 #'
 #' @param window  Window width.
 #'
 #' @param what  Statistic to use.
 #'
+#' @useDynLib broman, .registration=TRUE
 #' @export
 #' @return
-#' A vector with the same length as the input \code{at} (or \code{pos},
-#'   if \code{at} is NULL), containing the running
+#' A vector with the same length as the input `at` (or `pos`,
+#'   if `at` is NULL), containing the running
 #'   statistic.
 #'
 #' @author
-#' Karl W Broman \email{kbroman@@biostat.wisc.edu}
+#' Karl W Broman \email{broman@@wisc.edu}
 #'
 #' @examples
 #' x <- 1:10000
@@ -41,8 +42,7 @@
 #' lines(x, runningmean(x, y, window=100, what="sd"),
 #'       col="green", lwd=2)
 #'
-#' @seealso
-#' \code{\link{runningratio}}
+#' @seealso [runningratio()]
 #'
 #' @keywords
 #' univar
@@ -111,17 +111,18 @@ runningmean <-
 #' @param denominator Values for denominator in ratio.
 #'
 #' @param at Positions at which running ratio is
-#' calculated.  If NULL, \code{pos} is used.
+#' calculated.  If NULL, `pos` is used.
 #'
 #' @param window Window width.
 #'
+#' @useDynLib broman, .registration=TRUE
 #' @export
 #' @return
-#' A vector with the same length as the input \code{at} (or \code{pos},
-#'   if \code{at} is NULL), containing the running ratio.
+#' A vector with the same length as the input `at` (or `pos`,
+#'   if `at` is NULL), containing the running ratio.
 #'
 #' @author
-#' Karl W Broman \email{kbroman@@biostat.wisc.edu}
+#' Karl W Broman \email{broman@@wisc.edu}
 #'
 #' @examples
 #' x <- 1:1000
@@ -131,8 +132,7 @@ runningmean <-
 #' lines(x, runningratio(x, y, z, window=50), lwd=2, col="blue")
 #' lines(x, runningratio(x, y, z, window=100), lwd=2, col="red")
 #'
-#' @seealso
-#' \code{\link{runningmean}}
+#' @seealso [runningmean()]
 #'
 #' @keywords
 #' univar
