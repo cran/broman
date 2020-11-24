@@ -4,7 +4,7 @@
 \alias{dotplot}
 \title{Dot chart with a gray background}
 \usage{
-dotplot(group, y, jiggle = NULL, rotate = FALSE, ...)
+dotplot(group, y, jiggle = NULL, max_jiggle = NULL, rotate = FALSE, ...)
 }
 \arguments{
 \item{group}{Categorical coordinates for the plot}
@@ -14,6 +14,8 @@ dotplot(group, y, jiggle = NULL, rotate = FALSE, ...)
 \item{jiggle}{Vector of amounts to jiggle the points horizontally,
 or a character string (\code{"fixed"} or \code{"random"})
 indicating the jiggling method; see \code{\link[=jiggle]{jiggle()}}.}
+
+\item{max_jiggle}{Maximum jiggle value; passed to \code{\link[=jiggle]{jiggle()}} as argument \code{maxvalue}.}
 
 \item{rotate}{If TRUE, have group as y-axis; default (FALSE) has
 group on x-axis.}
@@ -40,7 +42,7 @@ in the desired order, for example \code{group <- factor(group, levels=unique(gro
 x <- rnorm(40, c(1,3))
 g <- rep(c("A", "B"), 20)
 dotplot(g, x)
-dotplot(g, x, "random")
+dotplot(g, x, "fixed")
 dotplot(g, x, runif(length(g), -0.25, 0.25))
 
 }

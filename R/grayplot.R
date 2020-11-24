@@ -43,14 +43,14 @@
 #' the horizontal ones.
 #'
 #' @details
-#' Calls [graphics::plot()] with `type="n"`, then [graphics::rect()] to
+#' Calls [base::plot()] with `type="n"`, then [graphics::rect()] to
 #' get the background, and then [graphics::points()]. Additional
 #' arguments you can include: `mgp.x` and `mgp.y` (like `mgp`, for
 #' controlling parameters of axis labels, but separate for x- and
 #' y-axis).
 #'
 #' @export
-#' @importFrom graphics plot title rect axis abline points
+#' @importFrom graphics title rect axis abline points
 #'
 #' @return
 #' None.
@@ -67,7 +67,7 @@
 #'          vlines=seq(0, 100, by=5), vlines.lwd=c(3,1,1,1))
 #'
 #' @seealso
-#' [graphics::plot()], [graphics::par()], [graphics::rect()], [graphics::points()]
+#' [base::plot()], [graphics::par()], [graphics::rect()], [graphics::points()]
 #'
 #' @keywords
 #' graphics
@@ -88,15 +88,12 @@ grayplot <-
                  col.lab=par("col.lab"),
                  xlim=NULL, ylim=NULL,
                  xlab, ylab, xname, yname,
-                 las=1, mgp.x=c(2.6, 0.5, 0), mgp.y=c(2.6, 0.5, 0),
+                 las=1, mgp=c(2.1, 0.5, 0), mgp.x=NULL, mgp.y=NULL,
                  pch=21, bg="lightblue", col="black",
                  v_over_h=FALSE)
         {
-            dots <- list(...)
-            if("mgp" %in% names(dots) && missing(mgp.x))
-                mgp.x <- dots$mgp
-            if("mgp" %in% names(dots) && missing(mgp.y))
-                mgp.y <- dots$mgp
+            if(is.null(mgp.x)) mgp.x <- mgp
+            if(is.null(mgp.y)) mgp.y <- mgp
 
             if(is.null(y)) {
                 if(missing(xlab)) xlab <- "Index"

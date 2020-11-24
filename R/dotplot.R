@@ -14,6 +14,7 @@
 #' @param jiggle Vector of amounts to jiggle the points horizontally,
 #' or a character string (`"fixed"` or `"random"`)
 #' indicating the jiggling method; see [jiggle()].
+#' @param max_jiggle Maximum jiggle value; passed to [jiggle()] as argument `maxvalue`.
 #'
 #' @details Calls [grayplot()] with special choices of
 #' graphics parameters for the case of categorical x.
@@ -34,7 +35,7 @@
 #' x <- rnorm(40, c(1,3))
 #' g <- rep(c("A", "B"), 20)
 #' dotplot(g, x)
-#' dotplot(g, x, "random")
+#' dotplot(g, x, "fixed")
 #' dotplot(g, x, runif(length(g), -0.25, 0.25))
 #'
 #' @seealso [grayplot()]
@@ -42,7 +43,8 @@
 #' @keywords
 #' graphics
 dotplot <-
-    function(group, y, jiggle=NULL, rotate=FALSE, ...)
+    function(group, y, jiggle=NULL, max_jiggle=NULL,
+             rotate=FALSE, ...)
 {
     stopifnot(length(y) == length(group))
     if(length(unique(y)) < length(unique(group)))
@@ -64,9 +66,9 @@ dotplot <-
 
     # horizontal jiggling
     if(is.null(jiggle))
-        jiggle <- broman::jiggle(group, y, "fixed")
+        jiggle <- broman::jiggle(group, y, "random", maxvalue=max_jiggle)
     else if(is.character(jiggle))
-        jiggle <- broman::jiggle(group, y, jiggle)
+        jiggle <- broman::jiggle(group, y, jiggle, maxvalue=max_jiggle)
     else # otherwise, numeric vector
         stopifnot(length(jiggle) == length(y))
 
@@ -84,22 +86,25 @@ dotplot <-
     # this is to deal with varying inputs
     hidedotplot <-
         function(group, y, rotate=FALSE,
-                 vlines=NULL, vlines.col="white", vlines.lwd=1,
-                 hlines=NULL, hlines.col="white", hlines.lwd=1,
+                 vlines=NULL, vlines.col=NULL, vlines.lwd=NULL,
+                 hlines=NULL, hlines.col=NULL, hlines.lwd=NULL,
                  xat=NULL, xlim=NULL, xaxs="r", xlab=NULL,
                  yat=NULL, ylim=NULL, yaxs="r", ylab=NULL,
-                 las=1, pch=21, bg="slateblue", ...)
+                 las=1, pch=21, bg="slateblue", v_over_h=NULL, ...)
 
         {
             if(!rotate) {
+                if(is.null(v_over_h)) v_over_h <- TRUE
                 xlim <- c(0.5, n_group+0.5)
-                vlines <- 1:n_group
-                vlines.col <- "gray70"
-                vlines.lwd <- 4
-                xat <- NA
+                if(is.null(vlines)) {
+                    vlines <- 1:n_group
+                    xat <- NA
+                }
+                if(is.null(vlines.col)) vlines.col <- "gray70"
+                if(is.null(vlines.lwd)) vlines.lwd <- 4
+                if(is.null(hlines.col)) hlines.col <- "white"
+                if(is.null(hlines.lwd)) hlines.lwd <- 1
                 if(is.null(xlab)) xlab <- "Group"
-
-                # deal with vlines/lines ** FIX ME **
 
                 grayplot(group+jiggle, y,
                          vlines=vlines, vlines.col=vlines.col, vlines.lwd=vlines.lwd,
@@ -111,11 +116,16 @@ dotplot <-
 
             }
             else {
+                if(is.null(v_over_h)) v_over_h <- FALSE
                 ylim <- c(0.5, n_group+0.5)
-                hlines <- 1:n_group
-                hlines.col <- "gray70"
-                hlines.lwd <- 4
-                yat <- NA
+                if(is.null(hlines)) {
+                    hlines <- 1:n_group
+                    yat <- NA
+                }
+                if(is.null(hlines.col)) hlines.col <- "gray70"
+                if(is.null(hlines.lwd)) hlines.lwd <- 4
+                if(is.null(vlines.col)) vlines.col <- "white"
+                if(is.null(vlines.lwd)) vlines.lwd <- 1
                 if(is.null(ylab)) ylab <- "Group"
 
                 grayplot(y, group + jiggle,
@@ -123,7 +133,7 @@ dotplot <-
                          hlines=hlines, hlines.col=hlines.col, hlines.lwd=hlines.lwd,
                          xat=xat, xlim=xlim, xaxs=xaxs, xlab=xlab,
                          yat=yat, ylim=ylim, yaxs=yaxs, ylab=ylab,
-                         v_over_h=TRUE, las=las, pch=pch, bg=bg, ...)
+                         v_over_h=v_over_h, las=las, pch=pch, bg=bg, ...)
                 axis(side=2, at=hlines, ugroup, las=las, tick=FALSE, mgp=c(0,0.3,0))
             }
 
