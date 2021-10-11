@@ -1,6 +1,6 @@
-f099ba0623f70f2eb19d4339d131822c *DESCRIPTION
-a69ca98efa19246ee295d3f862f82de1 *NAMESPACE
-8e15ca2bde5c1493a52f4ab87c5ce614 *NEWS
+07d763a084ada61b7843de0f630cfb1d *DESCRIPTION
+117f93cc5c2faf96f13af97279164ab1 *NAMESPACE
+858f94ff79b8e8dec73d25ca512fcf39 *NEWS
 a87e850a2e5e8ae4113d39862c39d6ae *R/add_commas.R
 2b43000380460766a5bc8de4c4338950 *R/align_stuff.R
 9eb1de613cee35fad62658f0b59d3db5 *R/arrowlocator.R
@@ -10,7 +10,7 @@ bc2d646a75c1adb9a18bbbec0c62ea65 *R/cf.R
 08ddc17aca23b4c1736311652f6245ab *R/ciplot.R
 6835ecba7199434ceaf5aae34711b812 *R/colwalpha.R
 9f8b8582a66e750b1024e0f702689969 *R/compare_rows.R
-a33452a546b4b3758c2b6076d451d8b0 *R/convert2hex.R
+cfee48542eaf7776ee2d2a344c1bebcc *R/convert2hex.R
 7876b12d55920467f1e792af20879708 *R/dotplot.R
 8b3bc765d9d5cc393c7a78d1dcba1ed3 *R/excel_fig.R
 2109c9de80e2746fa1dd25966e0ccbb1 *R/exit.R
@@ -38,7 +38,6 @@ d5be20ff0fb38a9a0ce125928894f947 *R/numbers.R
 5da43e1a76c8d463bd2c3bc5ed310e73 *R/pastedot.R
 172692cf5253d703c132e26e5f7f50ca *R/permtest.R
 885e99d1f8e3af4d05bf80b9f4a266a1 *R/pick_more_precise.R
-69d9ae3f4b347e0967924931464ba825 *R/pushbullet.R
 61a7323b74ea2d27167e0d02e0ef3e4e *R/qqline2.R
 909c73c1363d5672a73d8eae93767930 *R/qr.R
 f8b2c17e173b7b3471116ef1eddffd57 *R/quantileSE.R
@@ -55,13 +54,13 @@ a3ca91c6c7b77bb52490b8273f0f1ea5 *R/spell_out.R
 983687443a71d43a05d35446f3f2f488 *R/theme_karl.R
 8bb737274ad780a1d7703eb08384bed6 *R/trigrid.R
 f8ebc15d4d89e4dd13a9046fd7e69dbb *R/twocolorpal.R
-3dfd4d01a17bf90e399ea1fb5ec04e44 *R/util.R
+9ccd545220dc0669c0f5c40277960395 *R/util.R
 70dc78dae75958900e4a9818cfa24daf *R/vec2string.R
 414ea8463376c568325eebac22360229 *R/venn_diagram.R
-63ab4fdbdf0f3f5e17ef273d4eb57f36 *R/winsorize.R
+2ac851e61285d14b330e5dbcef308d8d *R/winsorize.R
 afd1b8ada5ffe495ef2c0cd6a4dc1725 *R/xlimlabel.R
-876dbeb9926a58f161b1d1b52122e340 *data/numbers-cap.RData
-bda577e02e94228a24eab8ab94f788c0 *data/numbers.RData
+647cc98723445c0a1395355b99df2ea2 *data/numbers-cap.RData
+9c1a8c07eaea3df7102a23147b77e7f3 *data/numbers.RData
 fee00bc27aa14d801301bfd07824bb7d *man/add_commas.Rd
 47be636868e5e9dd6dbdee2f99b350d2 *man/align_vectors.Rd
 8dc8bc3cb37d90a5d1440cb124b77a84 *man/arrowlocator.Rd
@@ -73,11 +72,9 @@ faaf34ef5d4d432cee23ae2578920761 *man/cf.Rd
 a44f71d650097bdd8a75376a8da508be *man/ciplot.Rd
 262b5f261dbc720e7ab6f659f39fe56e *man/colwalpha.Rd
 2e594e166fbd47e5e83e4b684c6de599 *man/compare_rows.Rd
-dc0a0578f650fe1f68f918f4d59678d8 *man/convert2hex.Rd
+17ab720b7719918b7a20a4d340ee022d *man/convert2hex.Rd
 cea0f74ae12e8e519d68a9fd7df0e125 *man/crayons.Rd
-e4a559df7c103b27e298460acec08afe *man/done.Rd
 790391a4abb8d27e86792d1f689575b4 *man/dotplot.Rd
-bab601966f706a8905bc6857204cf270 *man/errors2pushbullet.Rd
 8a5adf6532c9196b38907d2bb91ec881 *man/excel_fig.Rd
 49459230e0e582c09ffe9f4c11ded581 *man/exit.Rd
 2beea006de1930b997c6b6502ae291ab *man/fac2num.Rd
@@ -86,7 +83,7 @@ d49e89a15fdedc642c7df63abcdfda09 *man/get_precision.Rd
 cc91e2329c8da3fc6fbea3c4b4477ab3 *man/grayplot.Rd
 145dd93a665591883b35c2b8eeb488e1 *man/grayplot_na.Rd
 60338e86da75a06eb59db0926ea97638 *man/h.Rd
-6a4e2cfad5a437e0b08b9998bbb426bb *man/hex2dec.Rd
+7a24bc3084dc15cbdf5fa6f92103f2fa *man/hex2dec.Rd
 ec356f201e8b8b24acf28302a79105b9 *man/histlines.Rd
 a7d1504bebd070350a865d66df94b1aa *man/jiggle.Rd
 5d7beefe1b97fb12cbdc3146f223b2a8 *man/kbdate.Rd
@@ -97,7 +94,6 @@ f77547bf30150b656e12e0b43c423454 *man/make.Rd
 6e32ce9972ebf570a01d1bb443d08099 *man/mypairs.Rd
 1b523d6b9dc3e1b3d575fee2e65a69f8 *man/myround.Rd
 de105a3510f97cb75ec8519301bbc4de *man/normalize.Rd
-6706d0fc361c882941d1815e9ad48fc0 *man/note.Rd
 e763de86f00b21f35143a19b4de84539 *man/notin.Rd
 80791dcbad455c3d7c53700b00d5f1de *man/numbers.Rd
 cd25aac4303a97ac99485ff359150b50 *man/objectsizes.Rd
@@ -108,7 +104,6 @@ a17de5a6d408c1c001f4d3e2e0035d90 *man/paste..Rd
 95fa9a94a4b7cd6f2446a30d96e51d28 *man/perm.test.Rd
 54fb8519962532442ae1669139b94966 *man/pick_more_precise.Rd
 277c36aa443804cb3de698768009c3cc *man/plot_crayons.Rd
-ed4bc4840f76df59a0d0bf24864d3b81 *man/pushbullet_devices.Rd
 3c16dbeadd3bace9f3e2710290e83868 *man/qqline2.Rd
 ac074adaac815a92df963dd29f40f8c2 *man/qr2.Rd
 6bae23f1094f7b962e61f74bc2b909d2 *man/quantileSE.Rd
@@ -120,7 +115,6 @@ f31011c36013ea56010221debf874309 *man/runningratio.Rd
 12c5ec61abe99fa65616efe6d2adc667 *man/setRNGparallel.Rd
 30f95fc17b49c55c598ef21f16060c06 *man/simp.Rd
 2f04e0a3bf35a8dc84b74c03a2d424cf *man/spell_out.Rd
-6e0c54f48aea55a6043056207295e904 *man/stop_sending_errors.Rd
 3d9b837a89f1af2d52839db6461c4bc4 *man/strwidth2lines.Rd
 d989b0a260447e2b53aec9d55d6ca91c *man/strwidth2xlim.Rd
 a60e40a3f2897f578246eabd6d7eb487 *man/switchv.Rd
@@ -153,7 +147,7 @@ e93eb441ebbf263d5f0c6f0c77037e6a *tests/testthat.R
 571f44a34e3319ad5505058dad3312a5 *tests/testthat/test-crayons.R
 6cf7f10bd417cac92ab37e91743e5255 *tests/testthat/test-fac2num.R
 639a57505f7ccf0c0380cbb08b0c2e2c *tests/testthat/test-get_precision.R
-1efe752e2c19dd6f8fb56d0da729cbd0 *tests/testthat/test-hex2dec.R
+7a3f200ba8e02427f6482adcbc0fbec3 *tests/testthat/test-hex2dec.R
 1b8e93b93b89c757107b0b2e3ff8606a *tests/testthat/test-kbdate.R
 b9d245998188bf68029c152d8c1e8e1f *tests/testthat/test-lenuniq.R
 7c94630d43374fe5e4a50d3b3bcc86e8 *tests/testthat/test-maxabs.R
