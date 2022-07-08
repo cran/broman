@@ -1,6 +1,6 @@
-07d763a084ada61b7843de0f630cfb1d *DESCRIPTION
+e52dc97436726aae30fb1f3f55411cf2 *DESCRIPTION
 117f93cc5c2faf96f13af97279164ab1 *NAMESPACE
-858f94ff79b8e8dec73d25ca512fcf39 *NEWS
+19a1825520d91dc2feb0beb59e70261c *NEWS.md
 a87e850a2e5e8ae4113d39862c39d6ae *R/add_commas.R
 2b43000380460766a5bc8de4c4338950 *R/align_stuff.R
 9eb1de613cee35fad62658f0b59d3db5 *R/arrowlocator.R
@@ -22,7 +22,7 @@ cfee48542eaf7776ee2d2a344c1bebcc *R/convert2hex.R
 913d0ebc50ed2a1ca2e430b11d35cf4a *R/help.R
 b0d69a7d9b9e83726eee8f19a173d836 *R/histlines.R
 b5fdae480cd8cdbf8b137a95cee139c1 *R/holmans_triangle.R
-2f3e402b02a1cc7659b8d33cc8079cfc *R/jiggle.R
+f207ae7a1bba19030e1e4324a8cfc05c *R/jiggle.R
 f3b3b2b7c9f7d09129bc55661e938cea *R/kbdate.R
 3a4b10d4095a900c9178d55596bc1679 *R/lenuniq.R
 00b84ea7b20e22640b286f56b55e36fb *R/make.R
@@ -59,8 +59,8 @@ f8ebc15d4d89e4dd13a9046fd7e69dbb *R/twocolorpal.R
 414ea8463376c568325eebac22360229 *R/venn_diagram.R
 2ac851e61285d14b330e5dbcef308d8d *R/winsorize.R
 afd1b8ada5ffe495ef2c0cd6a4dc1725 *R/xlimlabel.R
-647cc98723445c0a1395355b99df2ea2 *data/numbers-cap.RData
-9c1a8c07eaea3df7102a23147b77e7f3 *data/numbers.RData
+b141b85085a7ca8397cfa1b21a0ff5b1 *data/numbers-cap.RData
+865e79ec04fcc506bdca16eed1343696 *data/numbers.RData
 fee00bc27aa14d801301bfd07824bb7d *man/add_commas.Rd
 47be636868e5e9dd6dbdee2f99b350d2 *man/align_vectors.Rd
 8dc8bc3cb37d90a5d1440cb124b77a84 *man/arrowlocator.Rd
@@ -85,7 +85,7 @@ cc91e2329c8da3fc6fbea3c4b4477ab3 *man/grayplot.Rd
 60338e86da75a06eb59db0926ea97638 *man/h.Rd
 7a24bc3084dc15cbdf5fa6f92103f2fa *man/hex2dec.Rd
 ec356f201e8b8b24acf28302a79105b9 *man/histlines.Rd
-a7d1504bebd070350a865d66df94b1aa *man/jiggle.Rd
+a4198e6049d90455a55a3d2ee5b4d034 *man/jiggle.Rd
 5d7beefe1b97fb12cbdc3146f223b2a8 *man/kbdate.Rd
 3af15b52001df055951aff3e70909632 *man/lenuniq.Rd
 f77547bf30150b656e12e0b43c423454 *man/make.Rd
@@ -132,7 +132,7 @@ fab516a730cac67e66331794237c8078 *man/winsorize.Rd
 1f49144a52a98c8a59e2c4d6de9d44c5 *man/xlimlabel.Rd
 25bdbba8e7489f2a4899213e8f16da78 *src/R_init.c
 c92616e6e47d7cf2a612e82f21c29932 *src/R_init.h
-12e20f77690863da2e5d2997c9a310c3 *src/compare_rows.c
+2cbcc767488fe1be0c5203656ff18749 *src/compare_rows.c
 4170668dce1b73e1be9e328f98436036 *src/compare_rows.h
 0a4918521d5968fe23a70a44698305cf *src/count_close.c
 21704cbbbc1189f94ba31d071a3182c3 *src/count_close.h
