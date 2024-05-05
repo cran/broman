@@ -1,6 +1,13 @@
 Revision history for the R/broman package
 -----------------------------------------
 
+## Version 0.82, 2024-05-05
+
+- Small change to documentation for `objectsizes()` (Mb -> MB)
+
+- Added function `time_axis()` for helping set up axis labels for date/times.
+
+
 ## Version 0.80, 2022-07-08
 
 - Include <limits.h> in a C file, for upcoming change to R.
