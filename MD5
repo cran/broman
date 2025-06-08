@@ -1,6 +1,6 @@
-603077e987c2d0f6139cdd454b71fb77 *DESCRIPTION
-11e9066b1a2ae90df7579a46a692a451 *NAMESPACE
-618ec615fb99ef8913f0e55675c17fc9 *NEWS.md
+f27ac7bb46c2793cfc07a8953c6bc263 *DESCRIPTION
+0bfaff45bd0b9037058d30ae9c6f09f3 *NAMESPACE
+bd92cfeb0d1f4c238b623b90fa604d43 *NEWS.md
 a87e850a2e5e8ae4113d39862c39d6ae *R/add_commas.R
 2b43000380460766a5bc8de4c4338950 *R/align_stuff.R
 9eb1de613cee35fad62658f0b59d3db5 *R/arrowlocator.R
@@ -44,7 +44,8 @@ f8b2c17e173b7b3471116ef1eddffd57 *R/quantileSE.R
 9d0d99811c7876ea81aa074ec98d807b *R/revgray.R
 9641d6713986d0ba5564ff4700e198f6 *R/revrainbow.R
 7993dba0238f5031b8931ce1f3546536 *R/rmvn.R
-8830f15fdd47503ebf6e682ae385f763 *R/runningmean.R
+efe712053618577f567a91461702344f *R/runningmean.R
+8324989838700cede3cfe2abbf667d80 *R/runningratio2.R
 ab9441fbc18a66725a539c98bd392cf6 *R/setRNGparallel.R
 016c21a5b909a1f532bc9c71b0eae16d *R/simp.R
 a3ca91c6c7b77bb52490b8273f0f1ea5 *R/spell_out.R
@@ -61,8 +62,8 @@ f8ebc15d4d89e4dd13a9046fd7e69dbb *R/twocolorpal.R
 414ea8463376c568325eebac22360229 *R/venn_diagram.R
 2ac851e61285d14b330e5dbcef308d8d *R/winsorize.R
 afd1b8ada5ffe495ef2c0cd6a4dc1725 *R/xlimlabel.R
-ca1f722f865ff0e16f545fd127500d59 *data/numbers-cap.RData
-db783eaab39d7ab5fffef74027b600c6 *data/numbers.RData
+aa354d6d519abb12407da047b0269b79 *data/numbers-cap.RData
+8747327520be4cf605cac99c3fcb589e *data/numbers.RData
 fee00bc27aa14d801301bfd07824bb7d *man/add_commas.Rd
 47be636868e5e9dd6dbdee2f99b350d2 *man/align_vectors.Rd
 8dc8bc3cb37d90a5d1440cb124b77a84 *man/arrowlocator.Rd
@@ -112,8 +113,9 @@ ac074adaac815a92df963dd29f40f8c2 *man/qr2.Rd
 29ae33c0f22ac4779f63235378043c0f *man/revgray.Rd
 433dd003a8e63510db6455d77c61f882 *man/revrainbow.Rd
 dca8bdec67ae23590a7535db5cf9ae60 *man/rmvn.Rd
-01eb7e6cb10a38952f485c938c6f194b *man/runningmean.Rd
-f31011c36013ea56010221debf874309 *man/runningratio.Rd
+b04304d474a7de39e8e096b478e87d31 *man/runningmean.Rd
+6f59e9278a58c98a6fab21c429a3003e *man/runningratio.Rd
+6cbe80db38a3eae5f23abd82ed8fd858 *man/runningratio2.Rd
 12c5ec61abe99fa65616efe6d2adc667 *man/setRNGparallel.Rd
 30f95fc17b49c55c598ef21f16060c06 *man/simp.Rd
 2f04e0a3bf35a8dc84b74c03a2d424cf *man/spell_out.Rd
@@ -144,6 +146,8 @@ bf9001f83e074ea43f0ce5e7b99451e6 *src/normalize.c
 13ca3a7be787244663764173a18f6620 *src/normalize.h
 bf349fd2eef3ecde270e3925b98ccbaa *src/runningmean.c
 0745786f9fb7aac909b448a7c5f09e17 *src/runningmean.h
+d7d9d50b9fd6d73434fe4c7752617500 *src/runningratio2.c
+b5b5adc142fde523943090216fa06eed *src/runningratio2.h
 e93eb441ebbf263d5f0c6f0c77037e6a *tests/testthat.R
 710294a829c5121457342b0751e26b4e *tests/testthat/test-add_commas.R
 125988a4fb470c2be8c7c1cb7882dd6a *tests/testthat/test-align_stuff.R
@@ -159,6 +163,8 @@ a0bbf4d67fc7943688db9edb177118e4 *tests/testthat/test-myround.R
 603f682c8839eea6bc3bf9d2813f9652 *tests/testthat/test-notin.R
 ed7f39a54a90b7e3e6192d9ec8777506 *tests/testthat/test-pick_more_precise.R
 ca4c37bcd315ff73ad71bbe3757bc7dd *tests/testthat/test-runningmean.R
+8c205afd9ff4ac713c76bcfb5b4a7980 *tests/testthat/test-runningratio.R
+f5619992bc477b99df9410ded2fe3189 *tests/testthat/test-runningratio2.R
 933604185046a31675a2885914407f39 *tests/testthat/test-spell_out.R
 2a796763edaa116f6bcb7706387657d1 *tests/testthat/test-switchv.R
 43eda941e62d1d8951422b9a78cb8257 *tests/testthat/test-vec2string.R

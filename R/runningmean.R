@@ -42,7 +42,7 @@
 #' lines(x, runningmean(x, y, window=100, what="sd"),
 #'       col="green", lwd=2)
 #'
-#' @seealso [runningratio()]
+#' @seealso [runningratio()], [runningratio2()]
 #'
 #' @keywords
 #' univar
@@ -72,7 +72,7 @@ runningmean <-
         value <- value[o]
     }
 
-    # check that pos is sorted
+    # check that at is sorted
     if(any(diff(at) < 0)) { # needs to be sorted
         o.at <- order(at)
         at <- at[o.at]
@@ -139,7 +139,7 @@ runningmean <-
 #' lines(x, runningratio(x, y, z, window=50), lwd=2, col="blue")
 #' lines(x, runningratio(x, y, z, window=100), lwd=2, col="red")
 #'
-#' @seealso [runningmean()]
+#' @seealso [runningmean()], [runningratio2()]
 #'
 #' @keywords
 #' univar
@@ -170,7 +170,7 @@ runningratio <-
         numerator <- numerator[o]
     }
 
-    # check that pos is sorted
+    # check that at is sorted
     if(any(diff(at) < 0)) { # needs to be sorted
         o.at <- order(at)
         at <- at[o.at]

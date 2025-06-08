@@ -1,6 +1,6 @@
 Package: broman
-Version: 0.84
-Date: 2024-05-18
+Version: 0.86
+Date: 2025-06-08
 Title: Karl Broman's R Code
 Description: Miscellaneous R functions, including functions related to
     graphics (mostly for base graphics), permutation tests, running
@@ -9,8 +9,9 @@ Authors@R: c(person("Karl W", "Broman", role=c("aut", "cre"),
              email="broman@wisc.edu", comment=c(ORCID = "0000-0002-4914-6671")),
              person("Aimee Teo", "Broman", role="ctb",
              comment=c(ORCID = "0000-0003-3783-2807")))
-Author: Karl W Broman [aut, cre] (<https://orcid.org/0000-0002-4914-6671>),
-  Aimee Teo Broman [ctb] (<https://orcid.org/0000-0003-3783-2807>)
+Author: Karl W Broman [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-4914-6671>),
+  Aimee Teo Broman [ctb] (ORCID: <https://orcid.org/0000-0003-3783-2807>)
 Maintainer: Karl W Broman <broman@wisc.edu>
 Depends: R (>= 2.15.0)
 Imports: utils, graphics, grDevices, stats, ggplot2, grid
@@ -21,8 +22,8 @@ BugReports: https://github.com/kbroman/broman/issues
 Encoding: UTF-8
 ByteCompile: true
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 NeedsCompilation: yes
-Packaged: 2024-05-18 19:34:54 UTC; kbroman
+Packaged: 2025-06-08 19:36:38 UTC; kbroman
 Repository: CRAN
-Date/Publication: 2024-05-18 20:20:03 UTC
+Date/Publication: 2025-06-08 20:20:07 UTC
