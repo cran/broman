@@ -1,6 +1,6 @@
-f27ac7bb46c2793cfc07a8953c6bc263 *DESCRIPTION
+5c014e01e2e0cdd70fd7047e38f94906 *DESCRIPTION
 0bfaff45bd0b9037058d30ae9c6f09f3 *NAMESPACE
-bd92cfeb0d1f4c238b623b90fa604d43 *NEWS.md
+3169b29228683ee352d583e824befa74 *NEWS.md
 a87e850a2e5e8ae4113d39862c39d6ae *R/add_commas.R
 2b43000380460766a5bc8de4c4338950 *R/align_stuff.R
 9eb1de613cee35fad62658f0b59d3db5 *R/arrowlocator.R
@@ -22,7 +22,7 @@ e858ba0c2ee15ffe5ebf70fe3f432468 *R/dotplot.R
 913d0ebc50ed2a1ca2e430b11d35cf4a *R/help.R
 b0d69a7d9b9e83726eee8f19a173d836 *R/histlines.R
 b5fdae480cd8cdbf8b137a95cee139c1 *R/holmans_triangle.R
-f207ae7a1bba19030e1e4324a8cfc05c *R/jiggle.R
+27915c5ab7439ba482068ccfb5d4e0bb *R/jiggle.R
 f3b3b2b7c9f7d09129bc55661e938cea *R/kbdate.R
 3a4b10d4095a900c9178d55596bc1679 *R/lenuniq.R
 00b84ea7b20e22640b286f56b55e36fb *R/make.R
@@ -35,7 +35,7 @@ a1472feccf6a946368b772138c0e2ba3 *R/not_in.R
 d5be20ff0fb38a9a0ce125928894f947 *R/numbers.R
 de37b722adf4294a93380bcafc6c1bae *R/objectsizes.R
 88a5fd4197bb2370bb2a37f1e9a76278 *R/openfile.R
-5da43e1a76c8d463bd2c3bc5ed310e73 *R/pastedot.R
+2e78ef9f65e2551e688a8cb8db396b21 *R/pastedot.R
 172692cf5253d703c132e26e5f7f50ca *R/permtest.R
 885e99d1f8e3af4d05bf80b9f4a266a1 *R/pick_more_precise.R
 61a7323b74ea2d27167e0d02e0ef3e4e *R/qqline2.R
@@ -62,8 +62,8 @@ f8ebc15d4d89e4dd13a9046fd7e69dbb *R/twocolorpal.R
 414ea8463376c568325eebac22360229 *R/venn_diagram.R
 2ac851e61285d14b330e5dbcef308d8d *R/winsorize.R
 afd1b8ada5ffe495ef2c0cd6a4dc1725 *R/xlimlabel.R
-aa354d6d519abb12407da047b0269b79 *data/numbers-cap.RData
-8747327520be4cf605cac99c3fcb589e *data/numbers.RData
+5bb6525dfec32a2a46f7f66ad74e3005 *data/numbers-cap.RData
+8dd2db6aef3519a9144537824b49127c *data/numbers.RData
 fee00bc27aa14d801301bfd07824bb7d *man/add_commas.Rd
 47be636868e5e9dd6dbdee2f99b350d2 *man/align_vectors.Rd
 8dc8bc3cb37d90a5d1440cb124b77a84 *man/arrowlocator.Rd
@@ -102,8 +102,8 @@ e763de86f00b21f35143a19b4de84539 *man/notin.Rd
 9424e3510a7a3a98be54fe775aa1cd1e *man/objectsizes.Rd
 68fe6153eeb5f2bf34c2a59663c77e3a *man/openfile.Rd
 8783e633d1d0d5bba9db0740a0b0c0b9 *man/paired.perm.test.Rd
-a17de5a6d408c1c001f4d3e2e0035d90 *man/paste..Rd
-6472c16534cf5db123e140e6e8d90cd2 *man/paste00.Rd
+ad1c48aaeeee9ac389fa7e86e4336abc *man/paste..Rd
+078918b69cd461b6ec666030bf74da86 *man/paste00.Rd
 95fa9a94a4b7cd6f2446a30d96e51d28 *man/perm.test.Rd
 54fb8519962532442ae1669139b94966 *man/pick_more_precise.Rd
 277c36aa443804cb3de698768009c3cc *man/plot_crayons.Rd

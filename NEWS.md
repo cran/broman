@@ -1,6 +1,13 @@
 Revision history for the R/broman package
 -----------------------------------------
 
+## Version 0.88, 2025-09-03
+
+- Fixed a bug in `jiggle()` for the case of a factor where some levels
+  are missing. This showed up as a problem with `dotplot()`, which
+  calls `jiggle()`. Fixes Issue #16.
+
+
 ## Version 0.86, 2025-06-08
 
 - Added `runningratio2()` which is like `runningratio()` but instead
