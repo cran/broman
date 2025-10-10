@@ -1,11 +1,11 @@
-5c014e01e2e0cdd70fd7047e38f94906 *DESCRIPTION
+251eb6210fcaad2b7eb4419b838cd890 *DESCRIPTION
 0bfaff45bd0b9037058d30ae9c6f09f3 *NAMESPACE
-3169b29228683ee352d583e824befa74 *NEWS.md
+275855e5dc3e918f48f2f29865780f39 *NEWS.md
 a87e850a2e5e8ae4113d39862c39d6ae *R/add_commas.R
 2b43000380460766a5bc8de4c4338950 *R/align_stuff.R
 9eb1de613cee35fad62658f0b59d3db5 *R/arrowlocator.R
 014fbfc03c2ea02ba4230c225d2f8f62 *R/attrnames.R
-54d1824fd8565486a4412ffe45a87a24 *R/brocolors.R
+42ce48422a3a684d0b634dad5328b167 *R/brocolors.R
 bc2d646a75c1adb9a18bbbec0c62ea65 *R/cf.R
 08ddc17aca23b4c1736311652f6245ab *R/ciplot.R
 6835ecba7199434ceaf5aae34711b812 *R/colwalpha.R
@@ -152,7 +152,7 @@ e93eb441ebbf263d5f0c6f0c77037e6a *tests/testthat.R
 710294a829c5121457342b0751e26b4e *tests/testthat/test-add_commas.R
 125988a4fb470c2be8c7c1cb7882dd6a *tests/testthat/test-align_stuff.R
 261e351c24ef0cc18c56e0483e247aa9 *tests/testthat/test-compare_rows.R
-571f44a34e3319ad5505058dad3312a5 *tests/testthat/test-crayons.R
+82cddf77d93b3d47f01cec269b261320 *tests/testthat/test-crayons.R
 6cf7f10bd417cac92ab37e91743e5255 *tests/testthat/test-fac2num.R
 639a57505f7ccf0c0380cbb08b0c2e2c *tests/testthat/test-get_precision.R
 7a3f200ba8e02427f6482adcbc0fbec3 *tests/testthat/test-hex2dec.R
