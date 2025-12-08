@@ -1,6 +1,6 @@
-251eb6210fcaad2b7eb4419b838cd890 *DESCRIPTION
+f572be8954939a048773b5916e993df5 *DESCRIPTION
 0bfaff45bd0b9037058d30ae9c6f09f3 *NAMESPACE
-275855e5dc3e918f48f2f29865780f39 *NEWS.md
+f8397aa088dc8d50c4ad8bc0d1d4f455 *NEWS.md
 a87e850a2e5e8ae4113d39862c39d6ae *R/add_commas.R
 2b43000380460766a5bc8de4c4338950 *R/align_stuff.R
 9eb1de613cee35fad62658f0b59d3db5 *R/arrowlocator.R
@@ -62,8 +62,8 @@ f8ebc15d4d89e4dd13a9046fd7e69dbb *R/twocolorpal.R
 414ea8463376c568325eebac22360229 *R/venn_diagram.R
 2ac851e61285d14b330e5dbcef308d8d *R/winsorize.R
 afd1b8ada5ffe495ef2c0cd6a4dc1725 *R/xlimlabel.R
-5bb6525dfec32a2a46f7f66ad74e3005 *data/numbers-cap.RData
-8dd2db6aef3519a9144537824b49127c *data/numbers.RData
+d1126688fde85548e256a087b81d5ce4 *data/numbers-cap.RData
+0ffd17cccacb7a046edd38199268dbd1 *data/numbers.RData
 fee00bc27aa14d801301bfd07824bb7d *man/add_commas.Rd
 47be636868e5e9dd6dbdee2f99b350d2 *man/align_vectors.Rd
 8dc8bc3cb37d90a5d1440cb124b77a84 *man/arrowlocator.Rd
@@ -142,11 +142,11 @@ c92616e6e47d7cf2a612e82f21c29932 *src/R_init.h
 4170668dce1b73e1be9e328f98436036 *src/compare_rows.h
 0a4918521d5968fe23a70a44698305cf *src/count_close.c
 21704cbbbc1189f94ba31d071a3182c3 *src/count_close.h
-bf9001f83e074ea43f0ce5e7b99451e6 *src/normalize.c
+c3ffed2acc1dbea9281ed64b676af2c3 *src/normalize.c
 13ca3a7be787244663764173a18f6620 *src/normalize.h
-bf349fd2eef3ecde270e3925b98ccbaa *src/runningmean.c
+35aec3a158bfef43621a17e821c12dc8 *src/runningmean.c
 0745786f9fb7aac909b448a7c5f09e17 *src/runningmean.h
-d7d9d50b9fd6d73434fe4c7752617500 *src/runningratio2.c
+cc9d7e09d800df14c0ad858f112417a1 *src/runningratio2.c
 b5b5adc142fde523943090216fa06eed *src/runningratio2.h
 e93eb441ebbf263d5f0c6f0c77037e6a *tests/testthat.R
 710294a829c5121457342b0751e26b4e *tests/testthat/test-add_commas.R
