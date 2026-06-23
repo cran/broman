@@ -1,6 +1,6 @@
 Package: broman
-Version: 0.94
-Date: 2026-06-08
+Version: 0.96
+Date: 2026-06-23
 Title: Karl Broman's R Code
 Description: Miscellaneous R functions, including functions related to
     graphics (mostly for base graphics), permutation tests, running
@@ -24,6 +24,6 @@ ByteCompile: true
 LazyData: true
 Config/roxygen2/version: 8.0.0
 NeedsCompilation: yes
-Packaged: 2026-06-09 02:58:11 UTC; kbroman
+Packaged: 2026-06-23 12:03:57 UTC; kbroman
 Repository: CRAN
-Date/Publication: 2026-06-09 03:40:08 UTC
+Date/Publication: 2026-06-23 13:00:02 UTC

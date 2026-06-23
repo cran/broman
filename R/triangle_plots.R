@@ -1,8 +1,8 @@
 #  triplot
 #'
-#' Plot Holmans triangle
+#' Plot ternary diagram (triangle plot)
 #'
-#' Plot Holmans triangle (an equilateral triangle used to depict
+#' Plot ternary plot (an equilateral triangle used to depict
 #'   trinomial distributions).
 #'
 #' @param labels Labels for the three corners (lower-right, top, lower-left).
@@ -39,10 +39,10 @@
 #' @examples
 #' triplot()
 #' x <- cbind(c(0.9, 0.05, 0.05), c(0.8, 0.1, 0.1), c(0.1, 0.9, 0), c(0, 0.9, 0.1))
-#' tripoints(x, lwd=2, col=c("black","blue","red","green"), pch=16)
-#' trilines(x, lwd=2, col="orange")
+#' tripoints(x, lwd=2, col=crayons(c("Black","Blue","Red","Green")), pch=16)
+#' trilines(x, lwd=2, col=crayons("Orange"))
 #' y <- cbind(c(0.05, 0.05, 0.9), c(0.25, 0.25, 0.5))
-#' triarrow(y, col="blue", lwd=2, len=0.1)
+#' triarrow(y, col=crayons("Blue"), lwd=2, len=0.1)
 #'
 #' @seealso
 #' [tripoints()], [trilines()],
@@ -91,9 +91,9 @@ triplot <-
 
 #  tripoints
 #'
-#' Plot points within a Holmans triangle
+#' Plot points within a ternary plot
 #'
-#' Plot points within a Holmans triangle (an equilateral triangle used to depict
+#' Plot points within a ternary plot (an equilateral triangle used to depict
 #'   trinomial distributions).
 #'
 #' @param x A matrix with three rows, each column being a trinomial distribution.
@@ -116,10 +116,10 @@ triplot <-
 #' @examples
 #' triplot()
 #' x <- cbind(c(0.9, 0.05, 0.05), c(0.8, 0.1, 0.1), c(0.1, 0.9, 0), c(0, 0.9, 0.1))
-#' tripoints(x, lwd=2, col=c("black","blue","red","green"), pch=16)
-#' trilines(x, lwd=2, col="orange")
+#' tripoints(x, lwd=2, col=crayons(c("Black","Blue","Red","Green")), pch=16)
+#' trilines(x, lwd=2, col=crayons("Orange"))
 #' y <- cbind(c(0.05, 0.05, 0.9), c(0.25, 0.25, 0.5))
-#' triarrow(y, col="blue", lwd=2, len=0.1)
+#' triarrow(y, col=crayons("Blue"), lwd=2, len=0.1)
 #'
 #' @seealso
 #' [triplot()], [trilines()],
@@ -163,9 +163,9 @@ tripoints <-
 
 #  trilines
 #'
-#' Plot lines within a Holmans triangle
+#' Plot lines within a ternary plot
 #'
-#' Plot lines within a Holmans triangle (an equilateral triangle used to depict
+#' Plot lines within a ternary plot (an equilateral triangle used to depict
 #'   trinomial distributions).
 #'
 #' @param x A matrix with three rows, each column being a trinomial
@@ -189,10 +189,10 @@ tripoints <-
 #' @examples
 #' triplot()
 #' x <- cbind(c(0.9, 0.05, 0.05), c(0.8, 0.1, 0.1), c(0.1, 0.9, 0), c(0, 0.9, 0.1))
-#' tripoints(x, lwd=2, col=c("black","blue","red","green"), pch=16)
-#' trilines(x, lwd=2, col="orange")
+#' tripoints(x, lwd=2, col=crayons(c("Black","Blue","Red","Green")), pch=16)
+#' trilines(x, lwd=2, col=crayons("Orange"))
 #' y <- cbind(c(0.05, 0.05, 0.9), c(0.25, 0.25, 0.5))
-#' triarrow(y, col="blue", lwd=2, len=0.1)
+#' triarrow(y, col=crayons("Blue"), lwd=2, len=0.1)
 #'
 #' @seealso
 #' [triplot()], [tripoints()],
@@ -236,9 +236,9 @@ trilines <-
 
 #  triarrow
 #'
-#' Plot an arrow within a Holmans triangle
+#' Plot an arrow within a ternary plot
 #'
-#' Plot an arrow within a Holmans triangle (an equilateral triangle used to depict
+#' Plot an arrow within a ternary plot (an equilateral triangle used to depict
 #'   trinomial distributions).
 #'
 #' @param x A matrix with three rows and two columns, each column being a trinomial
@@ -262,10 +262,10 @@ trilines <-
 #' @examples
 #' triplot()
 #' x <- cbind(c(0.9, 0.05, 0.05), c(0.8, 0.1, 0.1), c(0.1, 0.9, 0), c(0, 0.9, 0.1))
-#' tripoints(x, lwd=2, col=c("black","blue","red","green"), pch=16)
-#' trilines(x, lwd=2, col="orange")
+#' tripoints(x, lwd=2, col=crayons(c("Black","Blue","Red","Green")), pch=16)
+#' trilines(x, lwd=2, col=crayons("Orange"))
 #' y <- cbind(c(0.05, 0.05, 0.9), c(0.25, 0.25, 0.5))
-#' triarrow(y, col="blue", lwd=2, len=0.1)
+#' triarrow(y, col=crayons("Blue"), lwd=2, len=0.1)
 #'
 #' @seealso
 #' [triplot()], [tripoints()],
@@ -314,9 +314,9 @@ triarrow <-
 
 #  tritext
 #'
-#' Plot text within a Holmans triangle
+#' Plot text within a ternary plot
 #'
-#' Plot text within a Holmans triangle (an equilateral triangle used to depict
+#' Plot text within a ternary plot (an equilateral triangle used to depict
 #'   trinomial distributions).
 #'
 #' @param x A matrix with three rows, each column being a trinomial distribution.

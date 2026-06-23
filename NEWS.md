@@ -1,6 +1,24 @@
 Revision history for the R/broman package
 -----------------------------------------
 
+## Version 0.96, 2026-06-23
+
+- Added arguments `add` and `offset` to `ciplot()` so that multiple
+  sets of confidence intervals may be compared. (Issue #19)
+
+- `mypairs()` now calls `grayplot()` for the individual plots.
+  Actually, if `show_na=TRUE` it uses `grayplot_na()` so that missing
+  values are shown, and this is now the default.
+
+- Added [vignette about the package](https://kbroman.org/broman/broman.html)
+
+- Added a `tol` argument to `cf()`; if provided, we use `abs(x-y)<tol`
+  rather than `x==y`. (Issue #20)
+
+- In `rmvn()`, if `V` is a single number, it is taken to be the
+  correlation between all pairs, and the variances are taken to be 1.
+
+
 ## Version 0.94, 2026-06-08
 
 - Added argument `notexact` to `crayons()`. If TRUE, return all
@@ -475,7 +493,7 @@ Revision history for the R/broman package
 ## Version 0.31, 2010-11-22
 
 - Added functions triplot(), tripoints(), trilines(), triarrow() for
-  plotting Holmans triangle (an equilateral triangle used to depict
+  plotting ternary plot (an equilateral triangle used to depict
   trinomial distributions).
 
 - Added function venn() for drawing a to-scale Venn diagram.
